@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sitemap — Praveen Studio. Browse all pages, wedding stories, experiences, and services across our luxury wedding photography website.">
+    <meta property="og:title" content="Sitemap | Praveen Studio — Luxury Wedding Photography">
+    <meta property="og:description"
+        content="Complete directory and index of pages, portfolios, experiences, and client stories at Praveen Studio.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://www.praveenstudio.in/sitemap">
+    <link rel="icon" type="image/jpeg" href="assets/icon/logo.jpeg">
+    <link rel="apple-touch-icon" href="assets/icon/logo.jpeg">
+    <title>Sitemap | Praveen Studio — Luxury Wedding Photography & Films</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="global.css">
+    <style>
+        .sitemap-section {
+            padding: 4rem 5% 7rem;
+            background: var(--bg-secondary);
+        }
+
+        .sitemap-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sitemap-intro-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--bg-grey);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+        }
+
+        .sitemap-intro-info h2 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .sitemap-intro-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .sitemap-xml-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.6rem;
+            background: rgba(197, 160, 89, 0.12);
+            border: 1px solid var(--accent-dark);
+            border-radius: 30px;
+            color: var(--accent-dark);
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .sitemap-xml-badge:hover {
+            background: var(--accent-dark);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(197, 160, 89, 0.3);
+        }
+
+        .sitemap-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .sitemap-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--bg-grey);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sitemap-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(197, 160, 89, 0.5);
+        }
+
+        .sitemap-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.75rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid var(--bg-grey);
+        }
+
+        .sitemap-card-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(197, 160, 89, 0.12);
+            color: var(--accent-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .sitemap-card-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            color: var(--text-main);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .sitemap-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .sitemap-list li a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease, transform 0.2s ease;
+            padding: 0.35rem 0;
+        }
+
+        .sitemap-list li a:hover {
+            color: var(--accent-dark);
+            transform: translateX(4px);
+        }
+
+        .sitemap-list li a i {
+            font-size: 0.75rem;
+            opacity: 0.5;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .sitemap-list li a:hover i {
+            opacity: 1;
+            transform: translateX(3px);
+        }
+
+        .sitemap-badge {
+            font-size: 0.72rem;
+            padding: 0.2rem 0.6rem;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--bg-grey);
+            color: var(--accent-dark);
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 768px) {
+            .sitemap-intro-card {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1.75rem;
+                gap: 1.25rem;
+            }
+
+            .sitemap-card {
+                padding: 1.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="custom-cursor" class="custom-cursor"><span>VIEW<br>MORE</span></div>
+
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-brand">
+            <img src="assets/icon/logo.jpeg" alt="Praveen Studio Logo" class="nav-logo">
+            <span>PRAVEEN STUDIO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="our-story.html">OUR STORY</a></li>
+            <li class="nav-has-dropdown">
+                <a href="portfolio.html" class="nav-portfolio-link">PORTFOLIO</a>
+                <button class="nav-chevron" aria-label="Toggle stories dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="nav-dropdown" id="nav-dropdown" role="menu" aria-label="Portfolio stories">
+                    <div class="nav-dropdown-inner">
+                        <div class="nav-dropdown-group">
+                            <span class="nav-dropdown-heading">WEDDING</span>
+                            <div class="nav-dropdown-items" id="dropdown-wedding"></div>
+                        </div>
+                        <div class="nav-dropdown-divider"></div>
+                        <div class="nav-dropdown-group">
+                            <span class="nav-dropdown-heading">PRE-WEDDING</span>
+                            <div class="nav-dropdown-items" id="dropdown-prewedding"></div>
+                        </div>
+                        <div class="nav-dropdown-footer">
+                            <a href="portfolio.html" class="nav-dropdown-view-all">VIEW ALL STORIES <i
+                                    class="fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="signature-experiences.html">EXPERIENCES</a></li>
+            <li><a href="process.html">PROCESS</a></li>
+            <li><a href="our-team.html">TEAM</a></li>
+            <li><a href="albums-deliverables.html">ALBUMS</a></li>
+            <li><a href="client-love.html">CLIENT LOVE</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="contact.html" class="btn-quote">CHECK AVAILABILITY</a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open navigation">
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <button class="mobile-menu-close" id="mobile-menu-close"><i class="fa-solid fa-xmark"></i></button>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html"><span class="mob-link">HOME</span></a></li>
+            <li><a href="our-story.html"><span class="mob-link">OUR STORY</span></a></li>
+            <li class="mob-has-accordion">
+                <div class="mob-accordion-header">
+                    <a href="portfolio.html"><span class="mob-link">PORTFOLIO</span></a>
+                    <button class="mob-accordion-btn" aria-label="Expand stories" aria-expanded="false">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                </div>
+                <div class="mob-accordion-body" id="mob-accordion-body">
+                    <div class="mob-accordion-group">
+                        <span class="mob-accordion-heading">WEDDING</span>
+                        <div id="mob-dropdown-wedding"></div>
+                    </div>
+                    <div class="mob-accordion-group">
+                        <span class="mob-accordion-heading">PRE-WEDDING</span>
+                        <div id="mob-dropdown-prewedding"></div>
+                    </div>
+                    <a href="portfolio.html" class="mob-accordion-view-all">VIEW ALL STORIES <i
+                            class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+            </li>
+            <li><a href="signature-experiences.html"><span class="mob-link">EXPERIENCES</span></a></li>
+            <li><a href="process.html"><span class="mob-link">PROCESS</span></a></li>
+            <li><a href="our-team.html"><span class="mob-link">TEAM</span></a></li>
+            <li><a href="albums-deliverables.html"><span class="mob-link">ALBUMS</span></a></li>
+            <li><a href="client-love.html"><span class="mob-link">CLIENT LOVE</span></a></li>
+            <li><a href="faq.html"><span class="mob-link">FAQ</span></a></li>
+            <li><a href="contact.html"><span class="mob-link">CONTACT</span></a></li>
+        </ul>
+        <a href="contact.html" class="mobile-menu-cta">CHECK AVAILABILITY <i
+                class="fa-solid fa-arrow-right-long"></i></a>
+        <p class="mobile-menu-decor">PRAVEEN STUDIO &mdash; SINCE 1990</p>
+    </div>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero hero-minimal" id="sitemap-hero" style="min-height:42vh;">
+        <div class="page-hero-content">
+            <p class="page-hero-label">SITE DIRECTORY &amp; NAVIGATION</p>
+            <h1 class="page-hero-heading">
+                <span class="hero-line-wrap"><span class="hero-line">Website</span></span>
+                <span class="hero-line-wrap"><span class="hero-line">Sitemap</span></span>
+            </h1>
+            <p class="page-hero-sub">Explore the complete architecture and curated stories of Praveen Studio.</p>
+        </div>
+    </section>
+
+    <!-- SITEMAP CONTENT -->
+    <section class="sitemap-section">
+        <div class="sitemap-container">
+            <!-- Google Search Console XML Sitemap Card -->
+            <div class="sitemap-intro-card fade-up">
+                <div class="sitemap-intro-info">
+                    <h2>Google Search Console XML Sitemap</h2>
+                    <p>Our official XML sitemap index is maintained for search engine crawlers and Google Search Console indexing.</p>
+                </div>
+                <a href="sitemap.xml" target="_blank" class="sitemap-xml-badge">
+                    <i class="fa-solid fa-code"></i>
+                    <span>VIEW SITEMAP.XML</span>
+                </a>
+            </div>
+
+            <!-- Categories Grid -->
+            <div class="sitemap-grid">
+                <!-- Core Navigation -->
+                <div class="sitemap-card fade-up">
+                    <div class="sitemap-card-header">
+                        <div class="sitemap-card-icon"><i class="fa-solid fa-compass"></i></div>
+                        <h3 class="sitemap-card-title">Main Pages</h3>
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a href="index.html">
+                                <span>Home</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="our-story.html">
+                                <span>Our Story &amp; Heritage</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="our-team.html">
+                                <span>The Creative Team</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                <span>Contact &amp; Check Availability</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Experiences & Services -->
+                <div class="sitemap-card fade-up">
+                    <div class="sitemap-card-header">
+                        <div class="sitemap-card-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                        <h3 class="sitemap-card-title">Services &amp; Art</h3>
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a href="signature-experiences.html">
+                                <span>Signature Experiences</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="process.html">
+                                <span>Our 5-Stage Process</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="albums-deliverables.html">
+                                <span>Handcrafted Albums &amp; Deliverables</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Portfolio & Galleries -->
+                <div class="sitemap-card fade-up">
+                    <div class="sitemap-card-header">
+                        <div class="sitemap-card-icon"><i class="fa-solid fa-images"></i></div>
+                        <h3 class="sitemap-card-title">Portfolio Stories</h3>
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a href="portfolio.html">
+                                <span>Full Portfolio Archive</span>
+                                <span class="sitemap-badge">All</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html#wedding">
+                                <span>Luxury Wedding Films &amp; Photos</span>
+                                <span class="sitemap-badge">Wedding</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html#prewedding">
+                                <span>Cinematic Pre-Wedding Shoots</span>
+                                <span class="sitemap-badge">Pre-Wedding</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Stories & Insights -->
+                <div class="sitemap-card fade-up">
+                    <div class="sitemap-card-header">
+                        <div class="sitemap-card-icon"><i class="fa-solid fa-book-open"></i></div>
+                        <h3 class="sitemap-card-title">Editorial &amp; Reviews</h3>
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a href="client-love.html">
+                                <span>Client Love &amp; Testimonials</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="journal.html">
+                                <span>The Journal (Blog &amp; Advice)</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="faq.html">
+                                <span>Frequently Asked Questions</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal & SEO -->
+                <div class="sitemap-card fade-up">
+                    <div class="sitemap-card-header">
+                        <div class="sitemap-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 class="sitemap-card-title">Legal &amp; Search</h3>
+                    </div>
+                    <ul class="sitemap-list">
+                        <li>
+                            <a href="privacy-policy.html">
+                                <span>Privacy Policy</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms-conditions.html">
+                                <span>Terms &amp; Conditions</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sitemap.xml" target="_blank">
+                                <span>XML Sitemap (for Google Search Console)</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="robots.txt" target="_blank">
+                                <span>Robots.txt (Crawler Directives)</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col brand-col">
+                <div class="footer-brand">
+                    <img src="assets/icon/logo.jpeg" alt="Praveen Studio Logo" class="footer-logo">
+                    <span class="footer-title">PRAVEEN STUDIO</span>
+                </div>
+                <p class="brand-tagline">Preserving Emotions. Creating Timeless Memories. Since 1990.</p>
+                <a href="contact.html" class="btn-primary" style="margin-top:1.5rem; display:inline-block;">INQUIRE
+                    NOW</a>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">NAVIGATION</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="our-story.html">Our Story</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="signature-experiences.html">Experiences</a></li>
+                    <li><a href="process.html">Process</a></li>
+                    <li><a href="our-team.html">The Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">EXPERIENCES</h4>
+                <ul class="footer-links">
+                    <li><a href="signature-experiences.html#wedding">The Royal Wedding</a></li>
+                    <li><a href="signature-experiences.html#prewedding">Cinematic Pre-Wedding</a></li>
+                    <li><a href="signature-experiences.html#editorial">Editorial Portraits</a></li>
+                    <li><a href="signature-experiences.html#films">Cinematic Films</a></li>
+                    <li><a href="albums-deliverables.html">Fine Art Deliverables</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">GET IN TOUCH</h4>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <span class="contact-label">CALL US DIRECTLY</span>
+                        <a href="tel:+919827116666">+91 98271 16666</a>
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <span class="contact-label">EMAIL US</span>
+                        <a href="mailto:praveenstudio@gmail.com">praveenstudio@gmail.com</a>
+                    </div>
+                </div>
+                <div class="footer-contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <span class="contact-label">HEADQUARTERS</span>
+                        <span>Shop No 1, 2, 3, Old Bus Stand, Bilaspur, Chhattisgarh 495001 &amp; Raipur, Goa, India
+                            &amp; Beyond.</span>
+                    </div>
+                </div>
+                <div class="social-icons" style="margin-top:1.5rem;">
+                    <a href="https://www.instagram.com/couple_photoshot?stkn=dDQ1cnh0OHhicTdz" target="_blank"
+                        rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/praveenstudio8" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/@praveenstudio8" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-wordmark">
+            <h1>PRAVEEN STUDIO</h1>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PRAVEEN STUDIO. ALL RIGHTS RESERVED. &nbsp;|&nbsp; <a href="privacy-policy.html"
+                    style="opacity:0.8;">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms-conditions.html"
+                    style="opacity:0.8;">Terms &amp; Conditions</a> &nbsp;|&nbsp; <a href="sitemap.html"
+                    style="opacity:0.8;">Sitemap</a></p>
+        </div>
+    </footer>
+
+    <!-- FLOATING ELEMENTS -->
+    <div class="chatbot-launcher" id="chatbot-launcher">
+        <i class="fa-solid fa-message"></i>
+    </div>
+
+    <!-- AI Chatbot Window -->
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <div class="cb-info">
+                <strong>Praveen Studio AI</strong>
+                <span>Always here to help</span>
+            </div>
+            <button class="cb-close" id="cb-close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <div class="chatbot-body">
+            <div class="cb-message bot">
+                <p>Welcome to Praveen Studio.<br>How can we help you explore our services and sitemap?</p>
+            </div>
+            <div class="cb-quick-actions">
+                <button>VIEW PORTFOLIO</button>
+                <button>PHOTOGRAPHY SERVICES</button>
+                <button>GET A QUOTE</button>
+                <button>CONTACT STUDIO</button>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type a message...">
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919827116666" target="_blank" class="whatsapp-btn" title="CHAT ON WHATSAPP">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="stories.js"></script>
+    <script src="global.js"></script>
+</body>
+
+</html>
