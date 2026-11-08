@@ -100,27 +100,26 @@ h6 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
-    height: 100px;
+    width: 86px;
+    height: 86px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--text-main);
+    background-color: rgba(18, 16, 14, 0.9);
+    border: 1px solid rgba(212, 175, 55, 0.55);
+    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     letter-spacing: 2px;
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-    mix-blend-mode: exclusion;
-    /* Makes it pop */
-    color: white;
-    background-color: var(--text-main);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.2);
+    will-change: transform;
 }
 
 .custom-cursor.active {
@@ -548,201 +547,411 @@ h6 {
 }
 
 /* ==========================================================================
-   SECTION 02: INTRODUCTION
+   SECTION 02: PHILOSOPHY SPLIT LAYOUT
    ========================================================================== */
 .intro-section {
-    padding: 15vw 5%;
     background-color: var(--bg-secondary);
     position: relative;
     overflow: hidden;
+    padding: 10vw 0;
+}
+
+.intro-split-layout {
+    display: flex;
+    align-items: stretch;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    gap: 6vw;
+    min-height: 85vh;
+}
+
+/* Left column */
+.intro-text-col {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding-right: 2vw;
 }
 
-.intro-content {
-    width: 100%;
-    max-width: 1200px;
-    z-index: 2;
-    position: relative;
-}
-
-.large-editorial-text {
-    font-size: clamp(3rem, 8vw, 8rem);
-    text-align: center;
-    line-height: 1;
-    white-space: nowrap;
-    margin-bottom: 5rem;
-}
-
-.intro-details {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 4vw;
-    max-width: 460px;
-    position: relative;
-    z-index: 2;
-}
-
-.intro-label {
-    font-size: 0.8rem;
+.intro-eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
     letter-spacing: 3px;
     text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.intro-philosophy-heading {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 4.8rem);
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+}
+
+.iph-line {
+    display: block;
+    overflow: hidden;
+    clip-path: inset(0 0 100% 0);
+}
+
+.iph-italic {
+    display: block;
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.88em;
+    overflow: hidden;
+    clip-path: inset(0 0 100% 0);
+}
+
+.intro-philosophy-body {
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
     line-height: 1.8;
-    margin-bottom: 2.25rem;
+    color: var(--text-muted);
+    max-width: 420px;
+    margin-bottom: 3.5rem;
+    opacity: 0;
+}
+
+.intro-stats-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    opacity: 0;
+}
+
+.istat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.istat-num {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 2.5vw, 2.8rem);
+    line-height: 1;
+    color: var(--text-main);
+}
+
+.istat-label {
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     color: var(--text-muted);
 }
 
-.intro-description {
-    font-family: var(--font-display);
-    font-size: clamp(1.4rem, 2.4vw, 2.4rem);
-    max-width: 460px;
-    text-align: left;
-    font-style: italic;
-    line-height: 1.35;
-    position: relative;
-    z-index: 2;
+.istat-divider {
+    width: 1px;
+    height: 3rem;
+    background: var(--accent);
+    opacity: 0.4;
 }
 
-.intro-images {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Right column */
+.intro-image-col {
+    flex: 0 0 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.intro-img-clip {
+    width: 100%;
+    aspect-ratio: 3/4;
+    overflow: hidden;
+    clip-path: inset(100% 0 0 0);
+    position: relative;
+}
+
+.intro-portrait-img {
     width: 100%;
     height: 100%;
-    pointer-events: none;
-    z-index: 1;
+    object-fit: cover;
+    transform: scale(1.08);
+    transition: transform 0.1s linear;
 }
 
-.img-mask {
-    position: absolute;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.img-left {
-    top: 20%;
-    left: 10%;
-    width: 20vw;
-    height: 30vw;
-}
-
-.img-right {
-    bottom: 10%;
-    right: 15%;
-    width: 25vw;
-    height: 35vw;
-}
-
-.img-mask img {
+.intro-img-caption {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 120%;
-    /* for parallax */
+    padding-top: 1rem;
+    opacity: 0;
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-
-    .intro-details,
-    .intro-description {
-        max-width: 400px;
-    }
+.iic-label,
+.iic-year {
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
 }
 
+/* Mobile */
 @media (max-width: 768px) {
-    .intro-details {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1.5rem;
-        margin-top: 3rem;
-        max-width: 100%;
-        position: relative;
-        z-index: 2;
+    .intro-section {
+        padding: 14vw 0 10vw;
     }
 
-    .intro-label {
-        margin-bottom: 0;
-        font-size: 0.75rem;
+    .intro-split-layout {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        min-height: auto;
     }
 
-    .intro-description {
-        text-align: left;
-        max-width: 100%;
-        font-size: clamp(1.3rem, 4.5vw, 1.75rem);
-        position: relative;
-        z-index: 2;
+    .intro-image-col {
+        flex: none;
+        width: 100%;
+        align-items: stretch;
     }
 
-    .img-left,
-    .img-right {
-        opacity: 0.25;
+    .intro-img-clip {
+        aspect-ratio: 4/3;
+    }
+
+    .intro-text-col {
+        padding-right: 0;
+    }
+
+    .intro-philosophy-heading {
+        font-size: clamp(1.8rem, 7vw, 2.8rem);
+    }
+
+    .intro-stats-row {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .istat-divider {
+        display: none;
     }
 }
 
 /* ==========================================================================
-   SECTION 03: CINEMATIC IMAGE REVEAL
+   SECTION 03: CINEMATIC PHOTO REVEAL (GSAP SCROLL-PINNED)
    ========================================================================== */
 .reveal-section {
-    height: 200vh;
-    background-color: var(--bg-primary);
+    height: 250vh;
+    background-color: #080706;
+    position: relative;
+    overflow: visible;
 }
 
 .reveal-container {
     height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.reveal-img-wrapper {
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    /* Use clip path for smoother animation without layout thrashing */
-    clip-path: inset(25vh 35vw 25vh 35vw round 4px);
+    max-width: 100%;
     position: relative;
+    overflow: hidden;
+    background: #080706;
 }
 
-/* Dark overlay for text readability */
+/* Full-viewport photo that reveals via clip-path */
+.reveal-photo-wrap {
+    position: absolute;
+    inset: 0;
+    clip-path: inset(50% 25%);
+    will-change: clip-path, transform;
+    z-index: 1;
+}
+
+.reveal-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.12);
+    transform-origin: center center;
+    will-change: transform;
+}
+
+/* Dark overlay fade */
 .reveal-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    /* Animated by JS */
-    z-index: 1;
+    inset: 0;
+    background: rgba(8, 7, 6, 0.55);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Text layer */
+.reveal-text-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+    color: #fff;
     pointer-events: none;
 }
 
-.reveal-img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    transform: scale(1.2);
-}
-
-.reveal-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-    opacity: 0;
-    /* JS will fade this in */
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    /* No mix-blend-mode */
-}
-
-.reveal-text h2 {
-    font-size: clamp(3rem, 8vw, 8rem);
+.reveal-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.rev-line {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.reveal-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 7vw, 8rem);
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25em;
+}
+
+.rh-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.rh-accent {
+    color: rgba(255, 255, 255, 0.45);
+    font-style: italic;
+}
+
+.reveal-subtext {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 1.2vw, 1rem);
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 480px;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Counter bottom-left */
+.reveal-counter {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 3rem;
+    z-index: 10;
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    color: #fff;
+    opacity: 0;
+}
+
+.rc-num {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    line-height: 1;
+    font-weight: 400;
+}
+
+.rc-suffix {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-left: 0.3rem;
+}
+
+.rc-label {
+    display: none;
+}
+
+/* Corner frame brackets */
+.reveal-bracket {
+    position: absolute;
+    z-index: 10;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.reveal-bracket::before,
+.reveal-bracket::after {
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.reveal-bracket::before { width: 100%; height: 1px; }
+.reveal-bracket::after  { width: 1px; height: 100%; }
+
+.rb-tl { top: 2rem; left: 2rem; }
+.rb-tl::before { top: 0; left: 0; }
+.rb-tl::after  { top: 0; left: 0; }
+
+.rb-tr { top: 2rem; right: 2rem; }
+.rb-tr::before { top: 0; right: 0; left: auto; width: 100%; }
+.rb-tr::after  { top: 0; right: 0; left: auto; }
+
+.rb-bl { bottom: 2rem; left: 2rem; }
+.rb-bl::before { bottom: 0; top: auto; left: 0; }
+.rb-bl::after  { bottom: 0; top: auto; left: 0; }
+
+.rb-br { bottom: 2rem; right: 2rem; }
+.rb-br::before { bottom: 0; top: auto; right: 0; left: auto; }
+.rb-br::after  { bottom: 0; top: auto; right: 0; left: auto; }
+
+/* Mobile */
+@media (max-width: 768px) {
+    .reveal-section {
+        height: 220vh;
+    }
+
+    .reveal-headline {
+        font-size: clamp(2.2rem, 10vw, 3.6rem);
+    }
+
+    .reveal-counter {
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .reveal-bracket {
+        width: 22px;
+        height: 22px;
+    }
+
+    .rb-tl { top: 1rem; left: 1rem; }
+    .rb-tr { top: 1rem; right: 1rem; }
+    .rb-bl { bottom: 1rem; left: 1rem; }
+    .rb-br { bottom: 1rem; right: 1rem; }
+
+    .reveal-subtext br { display: none; }
 }
 
 /* ==========================================================================
@@ -751,7 +960,6 @@ h6 {
 .portfolio-section {
     background-color: var(--bg-primary);
     position: relative;
-    /* Height will be handled dynamically via JS pinning */
 }
 
 .portfolio-sticky-wrapper {
@@ -760,88 +968,160 @@ h6 {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    padding-top: var(--nav-height);
+    padding-top: clamp(60px, 7.5vh, 85px);
+    justify-content: flex-start;
 }
 
 .portfolio-header {
     padding: 0 5%;
-    margin-bottom: 2rem;
+    margin-bottom: clamp(0.5rem, 1.4vh, 1.2rem);
+    flex-shrink: 0;
+}
+
+.pf-eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
 }
 
 .portfolio-header h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2.4vw, 2.4rem);
     text-transform: uppercase;
+    line-height: 1.05;
 }
 
 .portfolio-header p {
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     letter-spacing: 3px;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
     color: var(--text-muted);
 }
 
 .portfolio-scroll-container {
     flex: 1;
+    min-height: 0;
     display: flex;
     align-items: center;
     padding-left: 5%;
+    overflow: hidden;
 }
 
 .portfolio-track {
     display: flex;
-    gap: 4vw;
+    gap: clamp(20px, 2.5vw, 36px);
     padding-right: 10vw;
-    /* End padding */
+    align-items: stretch;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Portfolio card — now an anchor */
+a.portfolio-item {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .portfolio-item {
-    width: 45vw;
-    min-width: 400px;
+    width: clamp(270px, 24vw, 360px);
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: clamp(0.35rem, 0.8vh, 0.65rem);
+    padding-bottom: 0.8rem;
+    flex-shrink: 0;
 }
 
 .pi-image-wrapper {
     width: 100%;
-    aspect-ratio: 4/5;
+    height: clamp(200px, 38vh, 350px);
     overflow: hidden;
+    flex-shrink: 0;
+    border-radius: 4px;
 }
 
 .pi-image-wrapper img {
     width: 100%;
     height: 100%;
-    /* Transition removed to prevent jitter with GSAP/ScrollTrigger if later animated. Hover effect relies on this though, but hover effect is purely CSS.
-       Wait, GSAP animates the track, not the image. Let's keep it but ensure no transition on .portfolio-track */
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    object-fit: cover;
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .portfolio-item:hover .pi-image-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 
 .pi-meta {
     display: flex;
-    gap: 1rem;
-    font-size: 0.8rem;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 0.15rem;
 }
 
 .pi-num {
     color: var(--text-muted);
+    font-weight: 500;
+}
+
+.pi-cat {
+    color: var(--text-main);
+    font-weight: 700;
 }
 
 .pi-title {
-    font-size: 2rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 1.4vw, 1.6rem);
     text-transform: uppercase;
+    line-height: 1.15;
+    margin: 0;
 }
 
-@media (max-width: 768px) {
-    .portfolio-item {
-        width: 80vw;
-        min-width: 280px;
-    }
+.pi-desc {
+    font-family: var(--font-body);
+    font-size: clamp(0.78rem, 0.85vw, 0.86rem);
+    line-height: 1.5;
+    color: var(--text-muted, #726c66);
+    max-width: 340px;
+    margin: 0;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
+
+.pi-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-top: 0.2rem;
+    transition: gap 0.3s ease;
+}
+
+.portfolio-item:hover .pi-link {
+    gap: 0.9rem;
+}
+
+.pi-link i {
+    font-size: 0.65rem;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .pi-link i {
+    transform: translateX(4px);
+}
+
 
 /* ==========================================================================
    SECTION 05: 3D PHOTO STACK
@@ -1792,63 +2072,87 @@ h6 {
     }
 
     /* ── Intro Section ──────────────────────────────────────── */
-    .intro-section {
-        padding: 12vw 5%;
-    }
+    /* (Mobile styles handled inline in intro-section block above) */
 
-    /* Remove nowrap so text wraps on mobile */
-    .large-editorial-text {
-        white-space: normal;
-        font-size: clamp(2rem, 10vw, 4rem);
-        text-align: center;
-        word-break: break-word;
-        margin-bottom: 2.5rem;
-        line-height: 1.1;
-    }
-
-    /* Hide side images on mobile to avoid overlap */
-    .img-left,
-    .img-right {
-        display: none;
-    }
-
-    /* ── Reveal Section ─────────────────────────────────────── */
+    /* ── Reveal Section (Mobile & Tablet) ─────────────────────── */
     .reveal-section {
-        height: 150vh;
+        height: 220vh;
     }
 
-    .reveal-text h2 {
-        font-size: clamp(2rem, 9vw, 4rem);
+    .reveal-headline {
+        font-size: clamp(2rem, 9vw, 3.2rem);
+    }
+
+    .reveal-counter {
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .rc-num {
+        font-size: 2.5rem;
+    }
+
+    .reveal-subtext {
+        font-size: 0.82rem;
+    }
+
+    .reveal-subtext br {
+        display: none;
     }
 
     /* ── Portfolio Section ──────────────────────────────────── */
     .portfolio-sticky-wrapper {
-        height: auto;
-        overflow: visible;
-        padding-top: var(--nav-height);
+        height: 100vh;
+        height: 100dvh;
+        overflow: hidden;
+        padding-top: calc(var(--nav-height) + 0.5rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .portfolio-header {
+        padding: 0.5rem 5% 0;
+        margin-bottom: 0.8rem;
     }
 
     .portfolio-scroll-container {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        padding-bottom: 1.5rem;
-        /* Show scrollbar hint */
-        scrollbar-width: thin;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding-left: 5%;
     }
 
     .portfolio-track {
         gap: 5vw;
-        padding-right: 5vw;
+        padding-right: 12vw;
     }
 
     .portfolio-item {
         width: 78vw;
         min-width: 260px;
+        max-width: 340px;
         flex-shrink: 0;
+        gap: 0.6rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .pi-image-wrapper {
+        aspect-ratio: 4/4.2;
     }
 
     .pi-title {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
+    }
+
+    .pi-desc {
+        font-size: 0.75rem;
+        line-height: 1.45;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     /* ── Stack Section ──────────────────────────────────────── */

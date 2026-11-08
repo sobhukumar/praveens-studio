@@ -2392,7 +2392,21 @@
 
 .mob-accordion-body.open {
     display: block !important;
+    max-height: 52vh;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    overscroll-behavior: contain !important;
+    touch-action: pan-y !important;
     animation: mobAccordionIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mob-accordion-body::-webkit-scrollbar {
+    width: 4px;
+}
+
+.mob-accordion-body::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 @keyframes mobAccordionIn {
@@ -2466,12 +2480,17 @@
     letter-spacing: 2px !important;
     text-transform: uppercase !important;
     font-weight: 700 !important;
-    color: var(--text-main) !important;
+    color: #000000 !important;
     text-decoration: none !important;
     min-height: 40px !important;
     padding: 6px 4px !important;
     transform: none !important;
     transition: gap 0.25s ease !important;
+}
+.mobile-nav-list .mob-accordion-view-all,
+.mobile-nav-list .mob-accordion-view-all *,
+.mobile-nav-list .mob-accordion-view-all i {
+    color: #000000 !important;
 }
 .mobile-nav-list .mob-accordion-view-all:hover i { transform: translateX(4px); }
 

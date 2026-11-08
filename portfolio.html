@@ -1642,6 +1642,11 @@
         /* --------------------------------------------------------------------------
            EXPLORE MORE (SHOW 10 PHOTOS INITIALLY THEN EXPAND VIA BUTTON)
            -------------------------------------------------------------------------- */
+        .photo-masonry-gallery.is-collapsed {
+            content-visibility: auto;
+            contain-intrinsic-size: 800px;
+        }
+
         .photo-masonry-gallery.is-collapsed .gallery-item:nth-child(n+11) {
             display: none !important;
         }
@@ -1800,7 +1805,7 @@
          ======================================================================== -->
     <header class="portfolio-hero" id="portfolio-hero">
         <div class="hero-bg-wrapper">
-            <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376092/wedding_2.webp"
+            <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376092/wedding_2.webp"
                 alt="Praveen Studio Portfolio - The Art of Your Story" class="hero-bg-img" loading="eager">
             <div class="hero-bg-overlay"></div>
         </div>
@@ -1856,7 +1861,7 @@
                                 src="https://www.youtube-nocookie.com/embed/a_fpKjF4tCM?autoplay=1&mute=1&loop=1&playlist=a_fpKjF4tCM&controls=1&modestbranding=1&rel=0&playsinline=1"
                                 title="Wedding Highlight | Pallavi & Samarth"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
+                                allowfullscreen loading="lazy" decoding="async"></iframe>
                         </div>
                         <div class="film-frame-footer">
                             <span class="film-frame-tag">WEDDING HIGHLIGHT</span>
@@ -1875,7 +1880,7 @@
                                 src="https://www.youtube-nocookie.com/embed/YuUatET5Tr4?autoplay=1&mute=1&loop=1&playlist=YuUatET5Tr4&controls=1&modestbranding=1&rel=0&playsinline=1"
                                 title="Best Pre Wedding Teaser 2025 | Somesh & Shubhangi"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
+                                allowfullscreen loading="lazy" decoding="async"></iframe>
                         </div>
                         <div class="film-frame-footer">
                             <span class="film-frame-tag">PRE-WEDDING FILM</span>
@@ -1894,7 +1899,7 @@
                                 src="https://www.youtube-nocookie.com/embed/aqMvoMRsAww?autoplay=1&mute=1&loop=1&playlist=aqMvoMRsAww&controls=1&modestbranding=1&rel=0&playsinline=1"
                                 title="Pallavi Ki Haldi | Same Day Edit | Haldi Carnival"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
+                                allowfullscreen loading="lazy" decoding="async"></iframe>
                         </div>
                         <div class="film-frame-footer">
                             <span class="film-frame-tag">HALDI CARNIVAL</span>
@@ -1913,7 +1918,7 @@
                                 src="https://www.youtube-nocookie.com/embed/pUpSrgLPei8?autoplay=1&mute=1&loop=1&playlist=pUpSrgLPei8&controls=1&modestbranding=1&rel=0&playsinline=1"
                                 title="Engagement Highlights | Heyansh & Bhumika"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
+                                allowfullscreen loading="lazy" decoding="async"></iframe>
                         </div>
                         <div class="film-frame-footer">
                             <span class="film-frame-tag">ENGAGEMENT HIGHLIGHTS</span>
@@ -1932,7 +1937,7 @@
                                 src="https://www.youtube-nocookie.com/embed/De9Kx7XZUKY?autoplay=1&mute=1&loop=1&playlist=De9Kx7XZUKY&controls=1&modestbranding=1&rel=0&playsinline=1"
                                 title="Best Pre Wedding Video | Chinmay & Priya"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
+                                allowfullscreen loading="lazy" decoding="async"></iframe>
                         </div>
                         <div class="film-frame-footer">
                             <span class="film-frame-tag">PRE-WEDDING CINEMA</span>
@@ -1951,7 +1956,7 @@
                                 src="https://www.youtube-nocookie.com/embed/ytyi83S4jA4?autoplay=1&mute=1&loop=1&playlist=ytyi83S4jA4&controls=1&modestbranding=1&rel=0&playsinline=1"
                                 title="Prewedding Teaser | Samarth & Pallavi"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
+                                allowfullscreen loading="lazy" decoding="async"></iframe>
                         </div>
                         <div class="film-frame-footer">
                             <span class="film-frame-tag">CINEMATIC TEASER</span>
@@ -1970,7 +1975,7 @@
                                 src="https://www.youtube-nocookie.com/embed/8qHF6Ua10_w?autoplay=1&mute=1&loop=1&playlist=8qHF6Ua10_w&controls=1&modestbranding=1&rel=0&playsinline=1"
                                 title="Wedding Highlight | Jayneet & Sneha"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen loading="lazy"></iframe>
+                                allowfullscreen loading="lazy" decoding="async"></iframe>
                         </div>
                         <div class="film-frame-footer">
                             <span class="film-frame-tag">SAME DAY EDIT</span>
@@ -2005,10 +2010,9 @@
         data-category="featured all weddings pre-weddings haldi bridal film">
         <div class="storyline-header">
             <div class="section-eyebrow">PRAVEEN STUDIO</div>
-            <h2 class="section-main-title" style="margin-bottom:18px;">Wedding &amp; Pre-Wedding Photography in
-                Chhattisgarh</h2>
+            <h2 class="section-main-title" style="margin-bottom:18px;">Wedding &amp; Pre-Wedding Photography </h2>
             <p class="storyline-intro">For over three decades, Praveen Studio has been crafting timeless visual stories
-                for families across Raipur, Katgi, Chhattisgarh and destination weddings across India. Every frame we
+                for families across India. Every frame we
                 capture is a whisper of emotion, a freeze of joy — meant to outlast time itself. Browse our curated
                 wedding and pre-wedding stories below and let each image speak to your heart.</p>
         </div>
@@ -2038,119 +2042,8 @@
             style="display:none;"></div>
     </section>
 
-    <!-- ========================================================================
-         WEDDINGS WE COVER SECTION
-         ======================================================================== -->
-    <section class="portfolio-section" id="weddings-cover-section"
-        data-category="featured all weddings pre-weddings haldi bridal film">
-        <div class="section-header-row">
-            <div>
-                <div class="section-eyebrow">WHERE WE PHOTOGRAPH</div>
-                <h2 class="section-main-title">Weddings We Cover</h2>
-            </div>
-        </div>
-        <div class="weddings-cover-grid">
-            <div class="weddings-cover-card">
-                <div class="cover-city">Raipur</div>
-                <div class="cover-tag">Capital City Weddings</div>
-            </div>
-            <div class="weddings-cover-card">
-                <div class="cover-city">Katgi</div>
-                <div class="cover-tag">Heritage Celebrations</div>
-            </div>
-            <div class="weddings-cover-card">
-                <div class="cover-city">Chhattisgarh</div>
-                <div class="cover-tag">Regional Ceremonies</div>
-            </div>
-            <div class="weddings-cover-card">
-                <div class="cover-city">Destination</div>
-                <div class="cover-tag">Across India &amp; Beyond</div>
-            </div>
-        </div>
-    </section>
 
 
-    <!-- ========================================================================
-         SECTION 1: FEATURED STORIES (MOMENTS THAT MATTER)
-         ======================================================================== -->
-    <section class="portfolio-section" id="featured-stories-section"
-        data-category="featured all weddings pre-weddings haldi bridal film">
-        <div class="featured-stories-container">
-            <div class="featured-intro-col">
-                <div>
-                    <div class="section-eyebrow">FEATURED STORIES</div>
-                    <h2 class="featured-title">Moments<br>That Matter</h2>
-                    <p class="featured-desc">A glimpse into the beautiful stories we've had the privilege to capture
-                        across weddings, pre-weddings, haldi, bridal and analogue film.</p>
-                </div>
-                <div class="featured-nav-arrows">
-                    <button class="arrow-circle-btn" id="featured-prev-btn" aria-label="Previous Stories">
-                        <i class="fa-solid fa-chevron-left"></i>
-                    </button>
-                    <button class="arrow-circle-btn" id="featured-next-btn" aria-label="Next Stories">
-                        <i class="fa-solid fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="featured-cards-slider" id="featured-cards-slider">
-                <!-- Card 02: Pre-Wedding -->
-                <div class="featured-card" onclick="openLightboxGroup('prewedding', 15)">
-                    <span class="featured-badge-num">01</span>
-                    <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375975/pre-wedding_16.webp"
-                        alt="Pre-Wedding Collection 02" loading="lazy">
-                    <div class="featured-card-overlay">
-                        <span class="featured-card-tag">PRE-WEDDING COLLECTION</span>
-                        <span class="featured-card-action">VIEW GALLERY &rarr;</span>
-                    </div>
-                </div>
-
-                <!-- Card 03: Wedding Ritual -->
-                <div class="featured-card" onclick="openLightboxGroup('wedding', 13)">
-                    <span class="featured-badge-num">02</span>
-                    <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376107/wedding_16.webp"
-                        alt="Wedding Collection 03" loading="lazy">
-                    <div class="featured-card-overlay">
-                        <span class="featured-card-tag">WEDDING COLLECTION</span>
-                        <span class="featured-card-action">VIEW GALLERY &rarr;</span>
-                    </div>
-                </div>
-
-                <!-- Card 04: Haldi Ceremony -->
-                <div class="featured-card" onclick="openLightboxGroup('haldi', 0)">
-                    <span class="featured-badge-num">03</span>
-                    <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375891/haldi_15.webp"
-                        alt="Haldi Collection 04" loading="lazy">
-                    <div class="featured-card-overlay">
-                        <span class="featured-card-tag">HALDI CEREMONY</span>
-                        <span class="featured-card-action">VIEW GALLERY &rarr;</span>
-                    </div>
-                </div>
-
-                <!-- Card 05: Bridal Portraits -->
-                <div class="featured-card" onclick="openLightboxGroup('bridal', 0)">
-                    <span class="featured-badge-num">04</span>
-                    <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374820/bridal_1.webp"
-                        alt="Bridal Collection 05" loading="lazy">
-                    <div class="featured-card-overlay">
-                        <span class="featured-card-tag">BRIDAL PORTRAITS</span>
-                        <span class="featured-card-action">VIEW GALLERY &rarr;</span>
-                    </div>
-                </div>
-
-                <!-- Card 06: Cinematic Film -->
-                <div class="featured-card" onclick="openLightboxGroup('film', 0)">
-                    <span class="featured-badge-num">05</span>
-                    <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375617/film_1.webp"
-                        alt="Film Collection 06" loading="lazy">
-                    <div class="featured-card-overlay">
-                        <span class="featured-card-tag">CINEMATIC FILM</span>
-                        <span class="featured-card-action">VIEW GALLERY &rarr;</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ========================================================================
          SECTION 2: WEDDING COLLECTIONS (EDITORIAL 4-COLUMN ASYMMETRIC GRID)
@@ -2174,128 +2067,128 @@
 
         <div class="photo-masonry-gallery is-collapsed" id="wedding-gallery">
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 0)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376082/wedding_1.webp"
-                    alt="Wedding 01 — The Sacred Beginning" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376082/wedding_1.webp"
+                    alt="Wedding 01 — The Sacred Beginning" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">01</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 1)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376087/wedding_3.webp"
-                    alt="Wedding 02 — Royal Bridal Grace" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376087/wedding_3.webp"
+                    alt="Wedding 02 — Royal Bridal Grace" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">02</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 2)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376080/wedding_4.webp"
-                    alt="Wedding 03 — Vows in Bloom" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376080/wedding_4.webp"
+                    alt="Wedding 03 — Vows in Bloom" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">03</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 3)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376080/wedding_5.webp"
-                    alt="Wedding 04 — Mandap Moments" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376080/wedding_5.webp"
+                    alt="Wedding 04 — Mandap Moments" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">04</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 4)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376080/wedding_7.webp"
-                    alt="Wedding 05 — Circle of Blessings" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376080/wedding_7.webp"
+                    alt="Wedding 05 — Circle of Blessings" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">05</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 5)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376087/wedding_8.webp"
-                    alt="Wedding 06 — Sacred Varmala Ritual" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376087/wedding_8.webp"
+                    alt="Wedding 06 — Sacred Varmala Ritual" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">06</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 6)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376098/wedding_9.webp"
-                    alt="Wedding 07 — Fire & Promises" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376098/wedding_9.webp"
+                    alt="Wedding 07 — Fire & Promises" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">07</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 7)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376095/wedding_10.webp"
-                    alt="Wedding 08 — Embrace of Forever" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376095/wedding_10.webp"
+                    alt="Wedding 08 — Embrace of Forever" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">08</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 8)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376115/wedding_11.webp"
-                    alt="Wedding 09 — Bridal Elegance" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376115/wedding_11.webp"
+                    alt="Wedding 09 — Bridal Elegance" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">09</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 9)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376096/wedding_12.webp"
-                    alt="Wedding 10 — Joy Under The Mandap" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376096/wedding_12.webp"
+                    alt="Wedding 10 — Joy Under The Mandap" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">10</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 10)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376107/wedding_13.webp"
-                    alt="Wedding 11 — Twilight Celebration" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376107/wedding_13.webp"
+                    alt="Wedding 11 — Twilight Celebration" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">11</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 11)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376138/wedding_14.webp"
-                    alt="Wedding 12 — Forever Hand in Hand" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376138/wedding_14.webp"
+                    alt="Wedding 12 — Forever Hand in Hand" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">12</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 12)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376107/wedding_15.webp"
-                    alt="Wedding 13 — The Last Look" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376107/wedding_15.webp"
+                    alt="Wedding 13 — The Last Look" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">13</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 13)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376107/wedding_16.webp"
-                    alt="Wedding 14 — Timeless Bridal Grace" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376107/wedding_16.webp"
+                    alt="Wedding 14 — Timeless Bridal Grace" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">14</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 14)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376114/wedding_17.webp"
-                    alt="Wedding 15 — Floral Canopy Love" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376114/wedding_17.webp"
+                    alt="Wedding 15 — Floral Canopy Love" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">15</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 15)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376124/wedding_18.webp"
-                    alt="Wedding 16 — Whispered Vows" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376124/wedding_18.webp"
+                    alt="Wedding 16 — Whispered Vows" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">16</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 16)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376119/wedding_19.webp"
-                    alt="Wedding 17 — Sacred Fire Ritual" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376119/wedding_19.webp"
+                    alt="Wedding 17 — Sacred Fire Ritual" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">17</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 17)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376118/wedding_20.webp"
-                    alt="Wedding 18 — Together As One" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376118/wedding_20.webp"
+                    alt="Wedding 18 — Together As One" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">18</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 18)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376133/wedding_21.webp"
-                    alt="Wedding 19 — Ceremonial Splendour" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376133/wedding_21.webp"
+                    alt="Wedding 19 — Ceremonial Splendour" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">19</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 19)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376135/wedding_22.webp"
-                    alt="Wedding 20 — Blessings & Joy" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376135/wedding_22.webp"
+                    alt="Wedding 20 — Blessings & Joy" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">20</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 20)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376123/wedding_23.webp"
-                    alt="Wedding 21 — Precious Moments" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376123/wedding_23.webp"
+                    alt="Wedding 21 — Precious Moments" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">21</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 21)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376140/wedding_24.webp"
-                    alt="Wedding 22 — The Grand Celebration" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376140/wedding_24.webp"
+                    alt="Wedding 22 — The Grand Celebration" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">22</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 22)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376136/wedding_25.webp"
-                    alt="Wedding 23 — Divine Union" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376136/wedding_25.webp"
+                    alt="Wedding 23 — Divine Union" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">23</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 23)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376140/wedding_26.webp"
-                    alt="Wedding 24 — Eternal Bonds" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376140/wedding_26.webp"
+                    alt="Wedding 24 — Eternal Bonds" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">24</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('wedding', 24)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376092/wedding_2.webp"
-                    alt="Wedding 25 — A Love Story Begins" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376092/wedding_2.webp"
+                    alt="Wedding 25 — A Love Story Begins" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">25</span></div>
             </div>
         </div>
@@ -2330,308 +2223,308 @@
 
         <div class="photo-masonry-gallery is-collapsed" id="pre-wedding-gallery">
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 0)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375954/pre-wedding_1.webp"
-                    alt="Pre-Wedding 01 — A Journey Begins" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375954/pre-wedding_1.webp"
+                    alt="Pre-Wedding 01 — A Journey Begins" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">01</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 1)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375955/pre-wedding_2.webp"
-                    alt="Pre-Wedding 02 — Flowing Whispers" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375955/pre-wedding_2.webp"
+                    alt="Pre-Wedding 02 — Flowing Whispers" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">02</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 2)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375956/pre-wedding_3.webp"
-                    alt="Pre-Wedding 03 — Into The Light" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375956/pre-wedding_3.webp"
+                    alt="Pre-Wedding 03 — Into The Light" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">03</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 3)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375954/pre-wedding_4.webp"
-                    alt="Pre-Wedding 04 — Golden Horizon" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375954/pre-wedding_4.webp"
+                    alt="Pre-Wedding 04 — Golden Horizon" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">04</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 4)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375954/pre-wedding_5.webp"
-                    alt="Pre-Wedding 05 — Misty Mornings" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375954/pre-wedding_5.webp"
+                    alt="Pre-Wedding 05 — Misty Mornings" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">05</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 5)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375954/pre-wedding_6.webp"
-                    alt="Pre-Wedding 06 — Sunlit Souls" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375954/pre-wedding_6.webp"
+                    alt="Pre-Wedding 06 — Sunlit Souls" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">06</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 6)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375959/pre-wedding_7.webp"
-                    alt="Pre-Wedding 07 — Wind & Wonder" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375959/pre-wedding_7.webp"
+                    alt="Pre-Wedding 07 — Wind & Wonder" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">07</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 7)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375960/pre-wedding_8.webp"
-                    alt="Pre-Wedding 08 — Quiet Reverie" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375960/pre-wedding_8.webp"
+                    alt="Pre-Wedding 08 — Quiet Reverie" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">08</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 8)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375962/pre-wedding_9.webp"
-                    alt="Pre-Wedding 09 — Tender Gaze" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375962/pre-wedding_9.webp"
+                    alt="Pre-Wedding 09 — Tender Gaze" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">09</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 9)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375960/pre-wedding_10.webp"
-                    alt="Pre-Wedding 10 — Dusk Romance" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375960/pre-wedding_10.webp"
+                    alt="Pre-Wedding 10 — Dusk Romance" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">10</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 10)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375963/pre-wedding_11.webp"
-                    alt="Pre-Wedding 11 — Chasing Stars" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375963/pre-wedding_11.webp"
+                    alt="Pre-Wedding 11 — Chasing Stars" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">11</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 11)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375966/pre-wedding_12.webp"
-                    alt="Pre-Wedding 12 — Intertwined" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375966/pre-wedding_12.webp"
+                    alt="Pre-Wedding 12 — Intertwined" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">12</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 12)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375964/pre-wedding_13.webp"
-                    alt="Pre-Wedding 13 — Secret Garden" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375964/pre-wedding_13.webp"
+                    alt="Pre-Wedding 13 — Secret Garden" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">13</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 13)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375968/pre-wedding_14.webp"
-                    alt="Pre-Wedding 14 — Pure Bliss" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375968/pre-wedding_14.webp"
+                    alt="Pre-Wedding 14 — Pure Bliss" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">14</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 14)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375973/pre-wedding_15.webp"
-                    alt="Pre-Wedding 15 — Meadow Dreams" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375973/pre-wedding_15.webp"
+                    alt="Pre-Wedding 15 — Meadow Dreams" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">15</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 15)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375975/pre-wedding_16.webp"
-                    alt="Pre-Wedding 16 — Silhouette Serenade" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375975/pre-wedding_16.webp"
+                    alt="Pre-Wedding 16 — Silhouette Serenade" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">16</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 16)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375970/pre-wedding_17.webp"
-                    alt="Pre-Wedding 17 — Waterfall Dreams" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375970/pre-wedding_17.webp"
+                    alt="Pre-Wedding 17 — Waterfall Dreams" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">17</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 17)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375969/pre-wedding_18.webp"
-                    alt="Pre-Wedding 18 — Autumn Waltz" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375969/pre-wedding_18.webp"
+                    alt="Pre-Wedding 18 — Autumn Waltz" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">18</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 18)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375975/pre-wedding_19.webp"
-                    alt="Pre-Wedding 19 — Forest Fairytale" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375975/pre-wedding_19.webp"
+                    alt="Pre-Wedding 19 — Forest Fairytale" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">19</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 19)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375981/pre-wedding_20.webp"
-                    alt="Pre-Wedding 20 — Lakeside Promises" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375981/pre-wedding_20.webp"
+                    alt="Pre-Wedding 20 — Lakeside Promises" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">20</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 20)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375980/pre-wedding_21.webp"
-                    alt="Pre-Wedding 21 — Rooftop Romance" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375980/pre-wedding_21.webp"
+                    alt="Pre-Wedding 21 — Rooftop Romance" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">21</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 21)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375975/pre-wedding_22.webp"
-                    alt="Pre-Wedding 22 — City in Love" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375975/pre-wedding_22.webp"
+                    alt="Pre-Wedding 22 — City in Love" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">22</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 22)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375980/pre-wedding_23.webp"
-                    alt="Pre-Wedding 23 — Whispers at Dusk" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375980/pre-wedding_23.webp"
+                    alt="Pre-Wedding 23 — Whispers at Dusk" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">23</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 23)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375979/pre-wedding_24.webp"
-                    alt="Pre-Wedding 24 — Desert Story" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375979/pre-wedding_24.webp"
+                    alt="Pre-Wedding 24 — Desert Story" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">24</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 24)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375986/pre-wedding_25.webp"
-                    alt="Pre-Wedding 25 — Vintage Elegance" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375986/pre-wedding_25.webp"
+                    alt="Pre-Wedding 25 — Vintage Elegance" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">25</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 25)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375981/pre-wedding_26.webp"
-                    alt="Pre-Wedding 26 — Palace Gardens" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375981/pre-wedding_26.webp"
+                    alt="Pre-Wedding 26 — Palace Gardens" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">26</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 26)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375983/pre-wedding_27.webp"
-                    alt="Pre-Wedding 27 — Mountain Horizon" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375983/pre-wedding_27.webp"
+                    alt="Pre-Wedding 27 — Mountain Horizon" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">27</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 27)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375986/pre-wedding_28.webp"
-                    alt="Pre-Wedding 28 — Terracotta Hues" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375986/pre-wedding_28.webp"
+                    alt="Pre-Wedding 28 — Terracotta Hues" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">28</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 28)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375985/pre-wedding_29.webp"
-                    alt="Pre-Wedding 29 — Dewdrop Morning" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375985/pre-wedding_29.webp"
+                    alt="Pre-Wedding 29 — Dewdrop Morning" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">29</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 29)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375985/pre-wedding_30.webp"
-                    alt="Pre-Wedding 30 — Together Forever" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375985/pre-wedding_30.webp"
+                    alt="Pre-Wedding 30 — Together Forever" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">30</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 30)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375991/pre-wedding_31.webp"
-                    alt="Pre-Wedding 31 — Cobblestone Romance" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375991/pre-wedding_31.webp"
+                    alt="Pre-Wedding 31 — Cobblestone Romance" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">31</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 31)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375991/pre-wedding_32.webp"
-                    alt="Pre-Wedding 32 — Twilight Embrace" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375991/pre-wedding_32.webp"
+                    alt="Pre-Wedding 32 — Twilight Embrace" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">32</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 32)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375992/pre-wedding_33.webp"
-                    alt="Pre-Wedding 33 — Rice Field Reverie" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375992/pre-wedding_33.webp"
+                    alt="Pre-Wedding 33 — Rice Field Reverie" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">33</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 33)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375993/pre-wedding_34.webp"
-                    alt="Pre-Wedding 34 — The Long Walk" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375993/pre-wedding_34.webp"
+                    alt="Pre-Wedding 34 — The Long Walk" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">34</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 34)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376000/pre-wedding_35.webp"
-                    alt="Pre-Wedding 35 — Candlelit Moments" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376000/pre-wedding_35.webp"
+                    alt="Pre-Wedding 35 — Candlelit Moments" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">35</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 35)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376000/pre-wedding_36.webp"
-                    alt="Pre-Wedding 36 — Dreamy Pastels" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376000/pre-wedding_36.webp"
+                    alt="Pre-Wedding 36 — Dreamy Pastels" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">36</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 36)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375998/pre-wedding_37.webp"
-                    alt="Pre-Wedding 37 — Monsoon Magic" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375998/pre-wedding_37.webp"
+                    alt="Pre-Wedding 37 — Monsoon Magic" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">37</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 37)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375999/pre-wedding_38.webp"
-                    alt="Pre-Wedding 38 — Among the Clouds" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375999/pre-wedding_38.webp"
+                    alt="Pre-Wedding 38 — Among the Clouds" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">38</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 38)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376002/pre-wedding_39.webp"
-                    alt="Pre-Wedding 39 — Heritage Hall" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376002/pre-wedding_39.webp"
+                    alt="Pre-Wedding 39 — Heritage Hall" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">39</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 39)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376000/pre-wedding_40.webp"
-                    alt="Pre-Wedding 40 — Infinity" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376000/pre-wedding_40.webp"
+                    alt="Pre-Wedding 40 — Infinity" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">40</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 40)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376010/pre-wedding_41.webp"
-                    alt="Pre-Wedding 41 — River Bank Poetry" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376010/pre-wedding_41.webp"
+                    alt="Pre-Wedding 41 — River Bank Poetry" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">41</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 41)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376014/pre-wedding_42.webp"
-                    alt="Pre-Wedding 42 — Blue Hour Love" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376014/pre-wedding_42.webp"
+                    alt="Pre-Wedding 42 — Blue Hour Love" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">42</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 42)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376020/pre-wedding_43.webp"
-                    alt="Pre-Wedding 43 — Coastal Breezes" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376020/pre-wedding_43.webp"
+                    alt="Pre-Wedding 43 — Coastal Breezes" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">43</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 43)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376007/pre-wedding_44.webp"
-                    alt="Pre-Wedding 44 — Twilight Silhouette" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376007/pre-wedding_44.webp"
+                    alt="Pre-Wedding 44 — Twilight Silhouette" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">44</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 44)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376009/pre-wedding_45.webp"
-                    alt="Pre-Wedding 45 — The Arch" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376009/pre-wedding_45.webp"
+                    alt="Pre-Wedding 45 — The Arch" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">45</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 45)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376011/pre-wedding_46.webp"
-                    alt="Pre-Wedding 46 — Bougainvillea Bliss" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376011/pre-wedding_46.webp"
+                    alt="Pre-Wedding 46 — Bougainvillea Bliss" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">46</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 46)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376019/pre-wedding_47.webp"
-                    alt="Pre-Wedding 47 — Barefoot & Free" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376019/pre-wedding_47.webp"
+                    alt="Pre-Wedding 47 — Barefoot & Free" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">47</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 47)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376024/pre-wedding_48.webp"
-                    alt="Pre-Wedding 48 — Petrichor & Love" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376024/pre-wedding_48.webp"
+                    alt="Pre-Wedding 48 — Petrichor & Love" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">48</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 48)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376020/pre-wedding_49.webp"
-                    alt="Pre-Wedding 49 — Valley Romance" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376020/pre-wedding_49.webp"
+                    alt="Pre-Wedding 49 — Valley Romance" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">49</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 49)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376020/pre-wedding_50.webp"
-                    alt="Pre-Wedding 50 — Halfway There" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376020/pre-wedding_50.webp"
+                    alt="Pre-Wedding 50 — Halfway There" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">50</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 50)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376025/pre-wedding_51.webp"
-                    alt="Pre-Wedding 51 — Starlit Serenade" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376025/pre-wedding_51.webp"
+                    alt="Pre-Wedding 51 — Starlit Serenade" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">51</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 51)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376030/pre-wedding_52.webp"
-                    alt="Pre-Wedding 52 — Hilltop Promise" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376030/pre-wedding_52.webp"
+                    alt="Pre-Wedding 52 — Hilltop Promise" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">52</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 52)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376033/pre-wedding_53.webp"
-                    alt="Pre-Wedding 53 — Arch of Flowers" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376033/pre-wedding_53.webp"
+                    alt="Pre-Wedding 53 — Arch of Flowers" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">53</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 53)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376045/pre-wedding_54.webp"
-                    alt="Pre-Wedding 54 — Cerulean Skies" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376045/pre-wedding_54.webp"
+                    alt="Pre-Wedding 54 — Cerulean Skies" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">54</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 54)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376032/pre-wedding_55.webp"
-                    alt="Pre-Wedding 55 — Backlit Beauty" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376032/pre-wedding_55.webp"
+                    alt="Pre-Wedding 55 — Backlit Beauty" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">55</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 55)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376033/pre-wedding_56.webp"
-                    alt="Pre-Wedding 56 — Rustic Charm" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376033/pre-wedding_56.webp"
+                    alt="Pre-Wedding 56 — Rustic Charm" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">56</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 56)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376043/pre-wedding_57.webp"
-                    alt="Pre-Wedding 57 — Forever Young" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376043/pre-wedding_57.webp"
+                    alt="Pre-Wedding 57 — Forever Young" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">57</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 57)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376044/pre-wedding_58.webp"
-                    alt="Pre-Wedding 58 — Candid Hearts" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376044/pre-wedding_58.webp"
+                    alt="Pre-Wedding 58 — Candid Hearts" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">58</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 58)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376047/pre-wedding_59.webp"
-                    alt="Pre-Wedding 59 — Wanderlust Love" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376047/pre-wedding_59.webp"
+                    alt="Pre-Wedding 59 — Wanderlust Love" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">59</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 59)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376045/pre-wedding_60.webp"
-                    alt="Pre-Wedding 60 — End of the Beginning" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376045/pre-wedding_60.webp"
+                    alt="Pre-Wedding 60 — End of the Beginning" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">60</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('prewedding', 60)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790376042/pre-wedding_61.webp"
-                    alt="Pre-Wedding 61 — Forever Starts Here" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790376042/pre-wedding_61.webp"
+                    alt="Pre-Wedding 61 — Forever Starts Here" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">61</span></div>
             </div>
         </div>
@@ -2666,93 +2559,93 @@
 
         <div class="photo-masonry-gallery is-collapsed" id="haldi-gallery">
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 0)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375891/haldi_2.webp"
-                    alt="Haldi 01 — First Touch of Gold" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375891/haldi_2.webp"
+                    alt="Haldi 01 — First Touch of Gold" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">01</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 1)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375892/haldi_3.webp"
-                    alt="Haldi 02 — Sisters & Laughter" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375892/haldi_3.webp"
+                    alt="Haldi 02 — Sisters & Laughter" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">02</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 2)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375892/haldi_4.webp"
-                    alt="Haldi 03 — Yellow Sunshine" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375892/haldi_4.webp"
+                    alt="Haldi 03 — Yellow Sunshine" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">03</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 3)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375892/haldi_5.webp"
-                    alt="Haldi 04 — Turmeric Tales" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375892/haldi_5.webp"
+                    alt="Haldi 04 — Turmeric Tales" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">04</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 4)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375895/haldi_6.webp"
-                    alt="Haldi 05 — Family Bliss" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375895/haldi_6.webp"
+                    alt="Haldi 05 — Family Bliss" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">05</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 5)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375902/haldi_7.webp"
-                    alt="Haldi 06 — Citrus & Marigold" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375902/haldi_7.webp"
+                    alt="Haldi 06 — Citrus & Marigold" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">06</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 6)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375903/haldi_8.webp"
-                    alt="Haldi 07 — Pure Joy" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375903/haldi_8.webp"
+                    alt="Haldi 07 — Pure Joy" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">07</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 7)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375902/haldi_9.webp"
-                    alt="Haldi 08 — Golden Glow" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375902/haldi_9.webp"
+                    alt="Haldi 08 — Golden Glow" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">08</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 8)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375901/haldi_10.webp"
-                    alt="Haldi 09 — Marigold Moments" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375901/haldi_10.webp"
+                    alt="Haldi 09 — Marigold Moments" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">09</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 9)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375902/haldi_11.webp"
-                    alt="Haldi 10 — Blessings Abound" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375902/haldi_11.webp"
+                    alt="Haldi 10 — Blessings Abound" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">10</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 10)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375904/haldi_12.webp"
-                    alt="Haldi 11 — The Bridal Chair" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375904/haldi_12.webp"
+                    alt="Haldi 11 — The Bridal Chair" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">11</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 11)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375912/haldi_13.webp"
-                    alt="Haldi 12 — Childhood Best Friends" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375912/haldi_13.webp"
+                    alt="Haldi 12 — Childhood Best Friends" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">12</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 12)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375915/haldi_14.webp"
-                    alt="Haldi 13 — Grandmother's Love" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375915/haldi_14.webp"
+                    alt="Haldi 13 — Grandmother's Love" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">13</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 13)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375913/haldi_15.webp"
-                    alt="Haldi 14 — Laughter & Colours" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375913/haldi_15.webp"
+                    alt="Haldi 14 — Laughter & Colours" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">14</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 14)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375918/haldi_16.webp"
-                    alt="Haldi 15 — Radiant Bride" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375918/haldi_16.webp"
+                    alt="Haldi 15 — Radiant Bride" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">15</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 15)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375913/haldi_17.webp"
-                    alt="Haldi 16 — Flower Shower" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375913/haldi_17.webp"
+                    alt="Haldi 16 — Flower Shower" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">16</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 16)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375916/haldi_18.webp"
-                    alt="Haldi 17 — Mother's Tears of Joy" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375916/haldi_18.webp"
+                    alt="Haldi 17 — Mother's Tears of Joy" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">17</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('haldi', 17)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375923/haldi_19.webp"
-                    alt="Haldi 18 — The Last Unmarried Day" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375923/haldi_19.webp"
+                    alt="Haldi 18 — The Last Unmarried Day" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">18</span></div>
             </div>
         </div>
@@ -2787,68 +2680,68 @@
 
         <div class="photo-masonry-gallery is-collapsed" id="bridal-gallery">
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 0)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374820/bridal_1.webp"
-                    alt="Bridal 01 — First Look" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790374820/bridal_1.webp"
+                    alt="Bridal 01 — First Look" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">01</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 1)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374823/bridal_2.webp"
-                    alt="Bridal 02 — Jewelled Elegance" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790374823/bridal_2.webp"
+                    alt="Bridal 02 — Jewelled Elegance" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">02</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 2)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374937/bridal_3.webp"
-                    alt="Bridal 03 — Red Splendour" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790374937/bridal_3.webp"
+                    alt="Bridal 03 — Red Splendour" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">03</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 3)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375062/bridal_4.webp"
-                    alt="Bridal 04 — Veil of Dreams" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375062/bridal_4.webp"
+                    alt="Bridal 04 — Veil of Dreams" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">04</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 4)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374987/bridal_5.webp"
-                    alt="Bridal 05 — Hands of Henna" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790374987/bridal_5.webp"
+                    alt="Bridal 05 — Hands of Henna" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">05</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 5)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374912/bridal_6.webp"
-                    alt="Bridal 06 — The Maang Tikka" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790374912/bridal_6.webp"
+                    alt="Bridal 06 — The Maang Tikka" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">06</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 6)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374888/bridal_7.webp"
-                    alt="Bridal 07 — Bridal Bliss" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790374888/bridal_7.webp"
+                    alt="Bridal 07 — Bridal Bliss" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">07</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 7)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375048/bridal_8.webp"
-                    alt="Bridal 08 — Dupatta Drama" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375048/bridal_8.webp"
+                    alt="Bridal 08 — Dupatta Drama" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">08</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 8)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375069/bridal_9.webp"
-                    alt="Bridal 09 — Golden Hour Portrait" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375069/bridal_9.webp"
+                    alt="Bridal 09 — Golden Hour Portrait" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">09</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 9)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375030/bridal_10.webp"
-                    alt="Bridal 10 — Petal Soft" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375030/bridal_10.webp"
+                    alt="Bridal 10 — Petal Soft" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">10</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 10)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375061/bridal_11.webp"
-                    alt="Bridal 11 — The Last Mirror" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375061/bridal_11.webp"
+                    alt="Bridal 11 — The Last Mirror" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">11</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 11)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375059/bridal_12.webp"
-                    alt="Bridal 12 — Regal & Radiant" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375059/bridal_12.webp"
+                    alt="Bridal 12 — Regal & Radiant" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">12</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('bridal', 12)">
-                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790374801/bridal_13.webp"
-                    alt="Bridal 13 — A Bride's Prayer" loading="lazy">
+                <img src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790374801/bridal_13.webp"
+                    alt="Bridal 13 — A Bride's Prayer" loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">13</span></div>
             </div>
         </div>
@@ -2883,483 +2776,483 @@
 
         <div class="photo-masonry-gallery is-collapsed" id="film-gallery">
             <div class="gallery-item" onclick="openLightboxGroup('film', 0)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375617/film_1.webp" alt="Film 01"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375617/film_1.webp" alt="Film 01"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">01</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 1)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375606/film_2.webp" alt="Film 02"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375606/film_2.webp" alt="Film 02"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">02</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 2)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375608/film_3.webp" alt="Film 03"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375608/film_3.webp" alt="Film 03"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">03</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 3)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375613/film_4.webp" alt="Film 04"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375613/film_4.webp" alt="Film 04"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">04</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 4)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375617/film_5.webp" alt="Film 05"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375617/film_5.webp" alt="Film 05"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">05</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 5)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375617/film_6.webp" alt="Film 06"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375617/film_6.webp" alt="Film 06"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">06</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 6)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375619/film_7.webp" alt="Film 07"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375619/film_7.webp" alt="Film 07"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">07</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 7)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375620/film_8.webp" alt="Film 08"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375620/film_8.webp" alt="Film 08"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">08</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 8)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375622/film_9.webp" alt="Film 09"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375622/film_9.webp" alt="Film 09"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">09</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 9)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375628/film_10.webp" alt="Film 10"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375628/film_10.webp" alt="Film 10"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">10</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 10)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375631/film_11.webp" alt="Film 11"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375631/film_11.webp" alt="Film 11"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">11</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 11)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375644/film_12.webp" alt="Film 12"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375644/film_12.webp" alt="Film 12"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">12</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 12)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375647/film_13.webp" alt="Film 13"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375647/film_13.webp" alt="Film 13"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">13</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 13)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375656/film_14.webp" alt="Film 14"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375656/film_14.webp" alt="Film 14"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">14</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 14)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375673/film_15.webp" alt="Film 15"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375673/film_15.webp" alt="Film 15"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">15</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 15)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375664/film_16.webp" alt="Film 16"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375664/film_16.webp" alt="Film 16"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">16</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 16)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375670/film_17.webp" alt="Film 17"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375670/film_17.webp" alt="Film 17"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">17</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 17)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375612/film_18.webp" alt="Film 18"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375612/film_18.webp" alt="Film 18"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">18</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 18)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375626/film_19.webp" alt="Film 19"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375626/film_19.webp" alt="Film 19"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">19</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 19)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375617/film_20.webp" alt="Film 20"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375617/film_20.webp" alt="Film 20"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">20</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 20)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375619/film_21.webp" alt="Film 21"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375619/film_21.webp" alt="Film 21"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">21</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 21)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375641/film_22.webp" alt="Film 22"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375641/film_22.webp" alt="Film 22"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">22</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 22)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375629/film_23.webp" alt="Film 23"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375629/film_23.webp" alt="Film 23"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">23</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 23)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375642/film_24.webp" alt="Film 24"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375642/film_24.webp" alt="Film 24"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">24</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 24)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375642/film_25.webp" alt="Film 25"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375642/film_25.webp" alt="Film 25"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">25</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 25)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375670/film_26.webp" alt="Film 26"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375670/film_26.webp" alt="Film 26"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">26</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 26)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375656/film_27.webp" alt="Film 27"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375656/film_27.webp" alt="Film 27"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">27</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 27)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375682/film_28.webp" alt="Film 28"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375682/film_28.webp" alt="Film 28"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">28</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 28)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375664/film_29.webp" alt="Film 29"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375664/film_29.webp" alt="Film 29"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">29</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 29)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375651/film_30.webp" alt="Film 30"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375651/film_30.webp" alt="Film 30"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">30</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 30)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375663/film_31.webp" alt="Film 31"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375663/film_31.webp" alt="Film 31"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">31</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 31)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375672/film_32.webp" alt="Film 32"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375672/film_32.webp" alt="Film 32"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">32</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 32)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375674/film_33.webp" alt="Film 33"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375674/film_33.webp" alt="Film 33"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">33</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 33)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375676/film_34.webp" alt="Film 34"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375676/film_34.webp" alt="Film 34"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">34</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 34)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375677/film_35.webp" alt="Film 35"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375677/film_35.webp" alt="Film 35"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">35</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 35)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375679/film_36.webp" alt="Film 36"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375679/film_36.webp" alt="Film 36"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">36</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 36)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375685/film_37.webp" alt="Film 37"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375685/film_37.webp" alt="Film 37"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">37</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 37)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375694/film_38.webp" alt="Film 38"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375694/film_38.webp" alt="Film 38"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">38</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 38)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375682/film_39.webp" alt="Film 39"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375682/film_39.webp" alt="Film 39"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">39</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 39)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375689/film_40.webp" alt="Film 40"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375689/film_40.webp" alt="Film 40"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">40</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 40)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375697/film_41.webp" alt="Film 41"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375697/film_41.webp" alt="Film 41"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">41</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 41)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375697/film_42.webp" alt="Film 42"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375697/film_42.webp" alt="Film 42"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">42</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 42)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375696/film_43.webp" alt="Film 43"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375696/film_43.webp" alt="Film 43"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">43</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 43)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375694/film_44.webp" alt="Film 44"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375694/film_44.webp" alt="Film 44"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">44</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 44)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375697/film_45.webp" alt="Film 45"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375697/film_45.webp" alt="Film 45"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">45</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 45)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375698/film_46.webp" alt="Film 46"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375698/film_46.webp" alt="Film 46"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">46</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 46)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375707/film_47.webp" alt="Film 47"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375707/film_47.webp" alt="Film 47"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">47</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 47)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375706/film_48.webp" alt="Film 48"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375706/film_48.webp" alt="Film 48"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">48</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 48)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375706/film_49.webp" alt="Film 49"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375706/film_49.webp" alt="Film 49"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">49</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 49)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375729/film_50.webp" alt="Film 50"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375729/film_50.webp" alt="Film 50"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">50</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 50)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375707/film_51.webp" alt="Film 51"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375707/film_51.webp" alt="Film 51"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">51</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 51)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375712/film_52.webp" alt="Film 52"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375712/film_52.webp" alt="Film 52"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">52</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 52)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375716/film_53.webp" alt="Film 53"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375716/film_53.webp" alt="Film 53"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">53</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 53)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375716/film_54.webp" alt="Film 54"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375716/film_54.webp" alt="Film 54"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">54</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 54)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375722/film_55.webp" alt="Film 55"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375722/film_55.webp" alt="Film 55"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">55</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 55)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375745/film_56.webp" alt="Film 56"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375745/film_56.webp" alt="Film 56"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">56</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 56)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375727/film_57.webp" alt="Film 57"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375727/film_57.webp" alt="Film 57"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">57</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 57)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375729/film_58.webp" alt="Film 58"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375729/film_58.webp" alt="Film 58"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">58</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 58)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375733/film_59.webp" alt="Film 59"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375733/film_59.webp" alt="Film 59"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">59</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 59)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375745/film_60.webp" alt="Film 60"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375745/film_60.webp" alt="Film 60"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">60</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 60)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375735/film_61.webp" alt="Film 61"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375735/film_61.webp" alt="Film 61"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">61</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 61)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375751/film_62.webp" alt="Film 62"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375751/film_62.webp" alt="Film 62"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">62</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 62)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375749/film_63.webp" alt="Film 63"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375749/film_63.webp" alt="Film 63"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">63</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 63)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375739/film_64.webp" alt="Film 64"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375739/film_64.webp" alt="Film 64"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">64</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 64)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375742/film_65.webp" alt="Film 65"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375742/film_65.webp" alt="Film 65"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">65</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 65)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375750/film_66.webp" alt="Film 66"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375750/film_66.webp" alt="Film 66"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">66</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 66)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375754/film_67.webp" alt="Film 67"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375754/film_67.webp" alt="Film 67"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">67</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 67)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375770/film_68.webp" alt="Film 68"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375770/film_68.webp" alt="Film 68"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">68</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 68)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375756/film_69.webp" alt="Film 69"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375756/film_69.webp" alt="Film 69"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">69</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 69)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375757/film_70.webp" alt="Film 70"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375757/film_70.webp" alt="Film 70"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">70</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 70)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375777/film_71.webp" alt="Film 71"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375777/film_71.webp" alt="Film 71"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">71</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 71)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375774/film_72.webp" alt="Film 72"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375774/film_72.webp" alt="Film 72"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">72</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 72)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375777/film_73.webp" alt="Film 73"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375777/film_73.webp" alt="Film 73"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">73</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 73)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375768/film_74.webp" alt="Film 74"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375768/film_74.webp" alt="Film 74"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">74</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 74)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375769/film_75.webp" alt="Film 75"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375769/film_75.webp" alt="Film 75"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">75</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 75)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375788/film_76.webp" alt="Film 76"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375788/film_76.webp" alt="Film 76"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">76</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 76)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375787/film_77.webp" alt="Film 77"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375787/film_77.webp" alt="Film 77"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">77</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 77)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375789/film_78.webp" alt="Film 78"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375789/film_78.webp" alt="Film 78"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">78</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 78)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375806/film_79.webp" alt="Film 79"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375806/film_79.webp" alt="Film 79"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">79</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 79)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375791/film_80.webp" alt="Film 80"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375791/film_80.webp" alt="Film 80"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">80</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 80)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375785/film_81.webp" alt="Film 81"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375785/film_81.webp" alt="Film 81"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">81</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 81)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375791/film_82.webp" alt="Film 82"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375791/film_82.webp" alt="Film 82"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">82</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 82)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375821/film_83.webp" alt="Film 83"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375821/film_83.webp" alt="Film 83"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">83</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 83)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375797/film_84.webp" alt="Film 84"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375797/film_84.webp" alt="Film 84"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">84</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 84)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375810/film_85.webp" alt="Film 85"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375810/film_85.webp" alt="Film 85"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">85</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 85)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375860/film_86.webp" alt="Film 86"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375860/film_86.webp" alt="Film 86"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">86</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 86)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375838/film_87.webp" alt="Film 87"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375838/film_87.webp" alt="Film 87"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">87</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 87)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375836/film_88.webp" alt="Film 88"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375836/film_88.webp" alt="Film 88"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">88</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 88)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375835/film_89.webp" alt="Film 89"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375835/film_89.webp" alt="Film 89"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">89</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 89)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375835/film_90.webp" alt="Film 90"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375835/film_90.webp" alt="Film 90"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">90</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 90)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375837/film_91.webp" alt="Film 91"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375837/film_91.webp" alt="Film 91"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">91</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 91)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375860/film_92.webp" alt="Film 92"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375860/film_92.webp" alt="Film 92"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">92</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 92)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375854/film_93.webp" alt="Film 93"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375854/film_93.webp" alt="Film 93"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">93</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 93)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375859/film_94.webp" alt="Film 94"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375859/film_94.webp" alt="Film 94"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">94</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 94)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375856/film_95.webp" alt="Film 95"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375856/film_95.webp" alt="Film 95"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">95</span></div>
             </div>
             <div class="gallery-item" onclick="openLightboxGroup('film', 95)"><img
-                    src="https://res.cloudinary.com/ew4jkfow/image/upload/v1790375862/film_96.webp" alt="Film 96"
-                    loading="lazy">
+                    src="https://res.cloudinary.com/ew4jkfow/image/upload/f_auto,q_auto,w_800/v1790375862/film_96.webp" alt="Film 96"
+                    loading="lazy" decoding="async">
                 <div class="gallery-item-overlay"><span class="gallery-item-num">96</span></div>
             </div>
         </div>
@@ -3535,7 +3428,7 @@
     <section class="portfolio-cta-banner">
         <div class="cta-bg-wrapper">
             <img src="https://images.unsplash.com/photo-1597157639073-69284dc0fdaf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=NHwxMjA3fDA%3D"
-                alt="Let's Create Your Story - Praveen Studio" class="cta-bg-img" loading="lazy">
+                alt="Let's Create Your Story - Praveen Studio" class="cta-bg-img" loading="lazy" decoding="async">
             <div class="cta-bg-overlay"></div>
         </div>
 
@@ -3896,7 +3789,7 @@
                 if (e.key === 'ArrowRight') changeLightboxImage(1);
             });
 
-            // 5. Film Strip Automatic Scroll & Interactive Drag
+            // 5. Film Strip Automatic Scroll & Interactive Drag (Throttled with IntersectionObserver)
             const filmViewport = document.getElementById('film-scroll-viewport');
             const filmTrack = document.getElementById('film-scroll-track');
             const filmPrevBtn = document.getElementById('film-strip-prev-btn');
@@ -3907,9 +3800,12 @@
                 let startX = 0;
                 let startScrollLeft = 0;
                 let isHovered = false;
+                let isFilmVisible = false;
+                let filmRafId = null;
                 const scrollSpeed = 0.85; // Pixels per frame right-to-left
 
                 function filmAutoScroll() {
+                    if (!isFilmVisible) return;
                     if (!isDragging && !isHovered) {
                         filmViewport.scrollLeft += scrollSpeed;
                         // When near the end, loop smoothly back to 0
@@ -3917,9 +3813,26 @@
                             filmViewport.scrollLeft = 0;
                         }
                     }
+                    filmRafId = requestAnimationFrame(filmAutoScroll);
+                }
+
+                if ('IntersectionObserver' in window) {
+                    const filmObserver = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            isFilmVisible = entry.isIntersecting;
+                            if (isFilmVisible) {
+                                cancelAnimationFrame(filmRafId);
+                                filmRafId = requestAnimationFrame(filmAutoScroll);
+                            } else {
+                                cancelAnimationFrame(filmRafId);
+                            }
+                        });
+                    }, { threshold: 0.05 });
+                    filmObserver.observe(filmViewport);
+                } else {
+                    isFilmVisible = true;
                     requestAnimationFrame(filmAutoScroll);
                 }
-                requestAnimationFrame(filmAutoScroll);
 
                 // Pause auto-scroll on hover so user can watch or click
                 filmViewport.addEventListener('mouseenter', () => { isHovered = true; });

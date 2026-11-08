@@ -7,21 +7,23 @@
 // Register GSAP Plugin
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize Lenis Smooth Scroll
+// Initialize Lenis Smooth Scroll with Responsive, Silky Smooth Settings
 const lenis = new Lenis({
-    duration: 1.2,
+    duration: 0.9,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     direction: 'vertical',
     gestureDirection: 'vertical',
     smooth: true,
     smoothTouch: false,
-    touchMultiplier: 2,
+    touchMultiplier: 1.8,
+    wheelMultiplier: 1.05,
     infinite: false,
 });
 
 lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time) => { lenis.raf(time * 1000); });
-gsap.ticker.lagSmoothing(0);
+// CRITICAL: Keep lagSmoothing ENABLED so frame drops are smoothly compensated!
+gsap.ticker.lagSmoothing(500, 33);
 
 // ==========================================================================
 // DOCUMENT READY
@@ -432,7 +434,7 @@ function initChatbot() {
 // ==========================================================================
 function initCursor() {
     const cursor = document.getElementById('custom-cursor');
-    if (!cursor || window.innerWidth <= 1024) return;
+    if (!cursor || window.innerWidth <= 1024 || window.matchMedia('(pointer: coarse)').matches) return;
 
     let xTo = gsap.quickTo(cursor, 'x', { duration: 0.1, ease: 'none' });
     let yTo = gsap.quickTo(cursor, 'y', { duration: 0.1, ease: 'none' });
@@ -440,7 +442,7 @@ function initCursor() {
     window.addEventListener('mousemove', (e) => {
         xTo(e.clientX);
         yTo(e.clientY);
-    });
+    }, { passive: true });
 
     document.querySelectorAll('.portfolio-masonry-item, .journal-card, .story-card-item, .featured-card').forEach(item => {
         item.addEventListener('mouseenter', () => cursor.classList.add('active'));
@@ -603,7 +605,7 @@ function initPortfolioDropdown() {
     });
 
     // ── Prevent Lenis scroll hijacking and enable smooth mouse wheel ───
-    var ddInners = document.querySelectorAll('.nav-dropdown-inner');
+    var ddInners = document.querySelectorAll('.nav-dropdown-inner, .mob-accordion-body, .mobile-menu-overlay');
     ddInners.forEach(function(inner) {
         inner.setAttribute('data-lenis-prevent', 'true');
         var parentDD = inner.closest('.nav-dropdown');
@@ -642,6 +644,15 @@ function initPortfolioDropdown() {
     }
 }
 
+// Cloudinary image auto-optimization helper
+function getOptimizedImgUrl(url, width = 800) {
+    if (!url || typeof url !== 'string') return url;
+    if (url.includes('cloudinary.com') && !url.includes('/image/upload/f_auto')) {
+        return url.replace('/image/upload/', `/image/upload/f_auto,q_auto,w_${width}/`);
+    }
+    return url;
+}
+
 // Also initialize the portfolio grid cards if on portfolio.html
 function initPortfolioGrid() {
     if (typeof STORIES === 'undefined') return;
@@ -661,9 +672,10 @@ function initPortfolioGrid() {
         var captionHtml = story.caption
             ? '<p class="story-card-caption">' + story.caption + '</p>'
             : '';
+        var optimizedCover = getOptimizedImgUrl(story.coverImage, 800);
         a.innerHTML =
             '<div class="story-card-img-wrap">' +
-              '<img src="' + story.coverImage + '" alt="' + story.coupleNames + ' — ' + (story.type === 'wedding' ? 'Wedding' : 'Pre-Wedding') + ' Photography by Praveen Studio" loading="lazy">' +
+              '<img src="' + optimizedCover + '" alt="' + story.coupleNames + ' — ' + (story.type === 'wedding' ? 'Wedding' : 'Pre-Wedding') + ' Photography by Praveen Studio" loading="lazy" decoding="async">' +
               '<div class="story-card-img-overlay"></div>' +
               '<div class="story-card-view-label">VIEW STORY &rarr;</div>' +
             '</div>' +

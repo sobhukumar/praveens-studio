@@ -3,15 +3,16 @@
 // ==========================================================================
 gsap.registerPlugin(ScrollTrigger);
 
-// Initialize Lenis Smooth Scroll
+// Initialize Lenis Smooth Scroll with Responsive, Silky Smooth Settings
 const lenis = new Lenis({
-    duration: 1.2,
+    duration: 0.9,
     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
     direction: 'vertical',
     gestureDirection: 'vertical',
     smooth: true,
     smoothTouch: false,
-    touchMultiplier: 2,
+    touchMultiplier: 1.8,
+    wheelMultiplier: 1.05,
     infinite: false,
 });
 
@@ -20,75 +21,44 @@ lenis.on('scroll', ScrollTrigger.update);
 gsap.ticker.add((time) => {
     lenis.raf(time * 1000);
 });
-gsap.ticker.lagSmoothing(0);
+// CRITICAL: Keep lagSmoothing ENABLED so frame drops are smoothly compensated!
+gsap.ticker.lagSmoothing(500, 33);
 
 // ==========================================================================
-// PRELOADER & FONT LOADING
+// PRELOADER & FAST INITIALIZATION
 // ==========================================================================
 document.addEventListener("DOMContentLoaded", () => {
     const preloader = document.getElementById('preloader');
+
+    // Start all site animations immediately so DOM is interactive & ready
+    initAnimations();
+
+    if (!preloader) return;
+
+    // Fast session-based preloader dismissal so page loads instantly
+    const hasSeenPreloader = sessionStorage.getItem('preloader_shown');
+    if (hasSeenPreloader) {
+        preloader.style.display = 'none';
+        return;
+    }
+
+    sessionStorage.setItem('preloader_shown', 'true');
+
+    // Quick luxury brand entrance: 0.4s brief intro then smooth fade
     const progressBar = document.querySelector('.preloader-progress-bar');
     const progressText = document.getElementById('progress-text');
-    const logoImg = document.querySelector('.preloader-logo');
-    const logo = document.querySelector('.preloader-title');
-    const subtitle = document.querySelector('.preloader-subtitle');
+    if (progressBar) progressBar.style.width = '100%';
+    if (progressText) progressText.innerText = '100%';
 
-    // Wait for fonts to be ready before removing preloader or initializing animations
-    document.fonts.ready.then(() => {
-        // Only run preloader on home page
-        const isHomePage = window.location.pathname === '/' || window.location.pathname.endsWith('index.html');
-        if (!isHomePage) {
+    gsap.to(preloader, {
+        opacity: 0,
+        duration: 0.45,
+        ease: 'power2.inOut',
+        delay: 0.3,
+        onComplete: () => {
             preloader.style.display = 'none';
-            initAnimations();
-            return;
+            ScrollTrigger.refresh();
         }
-
-        // Only show preloader once per browser session
-        const hasSeenPreloader = sessionStorage.getItem('preloader_shown');
-        if (hasSeenPreloader) {
-            preloader.style.display = 'none';
-            initAnimations();
-            return;
-        }
-
-        // Mark preloader as shown for this session
-        sessionStorage.setItem('preloader_shown', 'true');
-
-        // Simulate loading progress
-        let progress = 0;
-        const interval = setInterval(() => {
-            progress += Math.floor(Math.random() * 8) + 1;
-            if (progress > 100) progress = 100;
-            
-            progressBar.style.width = `${progress}%`;
-            progressText.innerText = `${progress}%`;
-
-            if (progress === 100) {
-                clearInterval(interval);
-                
-                // Preloader Exit Animation
-                const tl = gsap.timeline({
-                    onComplete: () => {
-                        preloader.style.display = 'none';
-                        initAnimations();
-                    }
-                });
-
-                tl.to([logoImg, logo, subtitle, progressBar.parentElement, progressText.parentElement], {
-                    y: -30,
-                    opacity: 0,
-                    duration: 0.8,
-                    stagger: 0.1,
-                    ease: "power2.inOut",
-                    delay: 0.2
-                })
-                .to(preloader, {
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power2.inOut"
-                });
-            }
-        }, 30); // 30ms interval ensures around 1.5-2 seconds duration
     });
 });
 
@@ -211,7 +181,7 @@ function initPortfolioDropdown() {
     });
 
     // ── Prevent Lenis scroll hijacking ───────────────────────────────
-    var ddInners = document.querySelectorAll('.nav-dropdown-inner');
+    var ddInners = document.querySelectorAll('.nav-dropdown-inner, .mob-accordion-body, .mobile-menu-overlay');
     ddInners.forEach(function(inner) {
         inner.setAttribute('data-lenis-prevent', 'true');
         var parentDD = inner.closest('.nav-dropdown');
@@ -359,97 +329,251 @@ function initHeroParallax() {
 }
 
 // ==========================================================================
-// INTRODUCTION
+// SECTION 02: PHILOSOPHY SPLIT ANIMATION
 // ==========================================================================
 function initIntro() {
-    gsap.to('#intro-large-text', {
-        xPercent: -30,
-        scrollTrigger: {
-            trigger: '.intro-section',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1
-        }
-    });
+    const section = document.querySelector('.intro-section');
+    if (!section) return;
 
-    gsap.to('.img-left img', {
-        yPercent: -20,
-        scrollTrigger: {
-            trigger: '.intro-section',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1
-        }
-    });
-
-    gsap.to('.img-right img', {
-        yPercent: 20,
-        scrollTrigger: {
-            trigger: '.intro-section',
-            start: 'top bottom',
-            end: 'bottom top',
-            scrub: 1
-        }
-    });
-}
-
-// ==========================================================================
-// CINEMATIC IMAGE REVEAL
-// ==========================================================================
-function initReveal() {
+    // Split text reveal timeline triggered on scroll
     const tl = gsap.timeline({
         scrollTrigger: {
-            trigger: '.reveal-section',
-            start: 'top top',
-            end: 'bottom bottom',
-            scrub: 1,
-            pin: '.reveal-container'
+            trigger: section,
+            start: 'top 75%',
+            toggleActions: 'play none none none'
         }
     });
 
-    tl.to('.reveal-img-wrapper', {
-        clipPath: 'inset(0vh 0vw 0vh 0vw round 0px)',
-        ease: 'none'
-    })
-    .to('.reveal-img', {
-        scale: 1,
-        ease: 'none'
-    }, "<")
-    .to('.reveal-overlay', {
+    // 1. Eyebrow slides up
+    tl.to('#intro-eyebrow', {
         opacity: 1,
-        ease: 'none'
-    }, "<0.3") // Start overlay a bit later
-    .to('.reveal-text', {
+        y: 0,
+        duration: 0.8,
+        ease: 'power3.out'
+    });
+
+    // 2. Editorial typography lines unclip
+    tl.to('.iph-line, .iph-italic', {
+        clipPath: 'inset(0% 0% 0% 0%)',
+        stagger: 0.12,
+        duration: 0.9,
+        ease: 'power3.out'
+    }, '-=0.5');
+
+    // 3. Body description & statistics fade up
+    tl.to('#intro-body', {
         opacity: 1,
-        ease: 'none'
-    }, "<0.1");
+        y: 0,
+        duration: 0.75,
+        ease: 'power2.out'
+    }, '-=0.4');
+
+    tl.to('#intro-stats', {
+        opacity: 1,
+        y: 0,
+        duration: 0.75,
+        ease: 'power2.out'
+    }, '-=0.5');
+
+    // 4. Portrait photo unclips from bottom
+    tl.to('#intro-img-clip', {
+        clipPath: 'inset(0% 0% 0% 0%)',
+        duration: 1.1,
+        ease: 'power3.inOut'
+    }, 0.2);
+
+    tl.to('.intro-img-caption', {
+        opacity: 1,
+        duration: 0.6,
+        ease: 'power2.out'
+    }, '-=0.3');
+
+    // 5. Parallax on portrait image during scroll
+    gsap.to('#intro-portrait', {
+        yPercent: -12,
+        ease: 'none',
+        scrollTrigger: {
+            trigger: section,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: 1
+        }
+    });
 }
 
 // ==========================================================================
-// PORTFOLIO HORIZONTAL SCROLL
+// SECTION 03: CINEMATIC PHOTO REVEAL (GSAP SCROLL-PINNED)
 // ==========================================================================
-function initPortfolio() {
-    const track = document.querySelector('.portfolio-track');
-    
-    // Function to calculate width dynamically
-    function getScrollAmount() {
-        let trackWidth = track.scrollWidth;
-        return -(trackWidth - window.innerWidth);
+function initReveal() {
+    const section = document.querySelector('.reveal-section');
+    const container = document.querySelector('.reveal-container');
+    if (!section || !container) return;
+
+    const photoWrap = document.getElementById('revealPhotoWrap');
+    const mainImg = document.getElementById('revealMainImg');
+    const overlay = document.getElementById('revealOverlay');
+    const eyebrow = document.getElementById('revealEyebrow');
+    const words = document.querySelectorAll('.rh-word');
+    const subtext = document.getElementById('revealSubtext');
+    const counter = document.getElementById('revealCounter');
+    const rcNum = document.getElementById('rcNum');
+    const brackets = document.querySelectorAll('.reveal-bracket');
+
+    // Master Scroll-pinned Timeline
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: section,
+            start: 'top top',
+            end: 'bottom bottom',
+            scrub: 1.2,
+            pin: container,
+            anticipatePin: 1
+        }
+    });
+
+    // 1. Frame brackets fade in immediately
+    if (brackets.length) {
+        tl.to(brackets, {
+            opacity: 1,
+            duration: 0.15,
+            ease: 'power1.out'
+        }, 0);
     }
 
+    // 2. Center photo aperture opens via clip-path (inset 50% 25% -> inset 0%)
+    if (photoWrap) {
+        tl.to(photoWrap, {
+            clipPath: 'inset(0% 0%)',
+            duration: 0.7,
+            ease: 'power2.inOut'
+        }, 0.05);
+    }
+
+    // 3. Main photo pulls back from scale 1.14 to 1.0 (cinematic slow zoom)
+    if (mainImg) {
+        tl.to(mainImg, {
+            scale: 1,
+            duration: 0.7,
+            ease: 'none'
+        }, 0.05);
+    }
+
+    // 4. Dark overlay softens from 0.55 to 0.25 so photo shines through
+    if (overlay) {
+        tl.to(overlay, {
+            opacity: 0.25,
+            duration: 0.6,
+            ease: 'none'
+        }, 0.1);
+    }
+
+    // 5. Eyebrow fades & slides into focus
+    if (eyebrow) {
+        tl.to(eyebrow, {
+            opacity: 1,
+            y: 0,
+            duration: 0.25,
+            ease: 'power2.out'
+        }, 0.2);
+    }
+
+    // 6. Editorial headline words stagger in dramatically
+    if (words.length) {
+        tl.to(words, {
+            opacity: 1,
+            y: 0,
+            stagger: 0.06,
+            duration: 0.35,
+            ease: 'power3.out'
+        }, 0.25);
+    }
+
+    // 7. Loving subtext appears
+    if (subtext) {
+        tl.to(subtext, {
+            opacity: 1,
+            y: 0,
+            duration: 0.3,
+            ease: 'power2.out'
+        }, 0.42);
+    }
+
+    // 8. Heritage counter counts up 0 -> 35+ Years
+    if (counter && rcNum) {
+        tl.to(counter, {
+            opacity: 1,
+            duration: 0.2,
+            ease: 'power1.out'
+        }, 0.3);
+
+        const countProxy = { val: 0 };
+        tl.to(countProxy, {
+            val: 35,
+            duration: 0.5,
+            ease: 'power2.out',
+            onUpdate: () => {
+                rcNum.textContent = Math.round(countProxy.val);
+            }
+        }, 0.3);
+    }
+
+    // 9. Subtle out-fade toward end of scroll so transition to Portfolio feels natural
+    tl.to([eyebrow, subtext, counter], {
+        opacity: 0.7,
+        duration: 0.15,
+        ease: 'none'
+    }, 0.85);
+}
+
+// ==========================================================================
+// SECTION 04: PORTFOLIO HORIZONTAL SCROLL & CARD REVEALS
+// ==========================================================================
+function initPortfolio() {
+    const section = document.querySelector('.portfolio-section');
+    const track = document.querySelector('.portfolio-track');
+    const stickyWrapper = document.querySelector('.portfolio-sticky-wrapper');
+    const cards = document.querySelectorAll('.portfolio-item');
+    if (!section || !track || !stickyWrapper) return;
+
+    // Calculate exact scroll distance dynamically
+    function getScrollAmount() {
+        const trackWidth = track.scrollWidth;
+        const pad = window.innerWidth > 768 ? 100 : 40;
+        return -(trackWidth - window.innerWidth + pad);
+    }
+
+    // Card entrance animation on first approach
+    gsap.fromTo(cards, 
+        { y: 35, opacity: 0.7 },
+        {
+            y: 0,
+            opacity: 1,
+            stagger: 0.08,
+            duration: 0.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: section,
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        }
+    );
+
+    // Pinned horizontal slide with scrub across desktop & mobile
     const tween = gsap.to(track, {
         x: getScrollAmount,
-        ease: "none"
+        ease: 'none'
     });
 
     ScrollTrigger.create({
-        trigger: ".portfolio-section",
-        start: "top top",
-        end: () => `+=${getScrollAmount() * -1}`,
-        pin: '.portfolio-sticky-wrapper',
+        trigger: section,
+        start: 'top top',
+        end: () => '+=' + Math.abs(getScrollAmount()),
+        pin: stickyWrapper,
         animation: tween,
-        scrub: 1,
-        invalidateOnRefresh: true // extremely important for resize
+        scrub: 1.1,
+        invalidateOnRefresh: true,
+        anticipatePin: 1
     });
 }
 
@@ -610,6 +734,8 @@ function initStatement() {
 // ==========================================================================
 function initCursor() {
     const cursor = document.getElementById('custom-cursor');
+    if (!cursor || window.matchMedia('(pointer: coarse)').matches) return;
+    
     const portfolioItems = document.querySelectorAll('.portfolio-item');
     
     let xTo = gsap.quickTo(cursor, "x", {duration: 0.1, ease: "none"});
@@ -618,7 +744,7 @@ function initCursor() {
     window.addEventListener('mousemove', (e) => {
         xTo(e.clientX);
         yTo(e.clientY);
-    });
+    }, { passive: true });
 
     portfolioItems.forEach(item => {
         item.addEventListener('mouseenter', () => {
