@@ -74,6 +74,7 @@ function initAnimations() {
     initHeroParallax();
     initIntro();
     initReveal();
+    initTriptych();
     initPortfolio();
     initStack();
     initLegacy();
@@ -523,6 +524,123 @@ function initReveal() {
         duration: 0.15,
         ease: 'none'
     }, 0.85);
+}
+
+// ==========================================================================
+// SECTION 03B: THE ART OF OBSERVATION (TRIPTYCH HORIZON)
+// ==========================================================================
+function initTriptych() {
+    const section = document.querySelector('.triptych-section');
+    const container = document.querySelector('.triptych-container');
+    if (!section || !container) return;
+
+    const eyebrow = document.querySelector('.triptych-eyebrow');
+    const headline = document.querySelector('.triptych-headline');
+    const sub = document.querySelector('.triptych-sub');
+    const cardLeft = document.getElementById('triptychCardLeft');
+    const cardCenter = document.getElementById('triptychCardCenter');
+    const cardRight = document.getElementById('triptychCardRight');
+    const marquee = document.querySelector('.triptych-marquee-text');
+
+    // Desktop: ScrollTrigger Pinned Bloom Timeline
+    if (window.innerWidth > 768) {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: section,
+                start: 'top top',
+                end: 'bottom bottom',
+                scrub: 1.2,
+                pin: container,
+                anticipatePin: 1
+            }
+        });
+
+        // 1. Header typography reveals with elegant stagger
+        if (eyebrow) {
+            tl.to(eyebrow, { opacity: 1, y: 0, duration: 0.25, ease: 'power2.out' }, 0);
+        }
+        if (headline) {
+            tl.to(headline, { opacity: 1, y: 0, duration: 0.35, ease: 'power3.out' }, 0.05);
+        }
+        if (sub) {
+            tl.to(sub, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out' }, 0.12);
+        }
+
+        // 2. The 3 Triptych Panels start centered and bloom outward into 3D horizon
+        if (cardLeft) {
+            tl.fromTo(cardLeft, 
+                { x: 80, y: 40, rotationY: 0, rotationZ: 0, opacity: 0.6 },
+                { x: 0, y: 0, rotationY: 6, rotationZ: -2.5, opacity: 1, duration: 0.6, ease: 'power2.out' },
+                0.15
+            );
+        }
+
+        if (cardCenter) {
+            tl.fromTo(cardCenter,
+                { scale: 0.92, z: -40, opacity: 0.7 },
+                { scale: 1.04, z: 40, opacity: 1, duration: 0.65, ease: 'power2.out' },
+                0.15
+            );
+        }
+
+        if (cardRight) {
+            tl.fromTo(cardRight,
+                { x: -80, y: 40, rotationY: 0, rotationZ: 0, opacity: 0.6 },
+                { x: 0, y: 0, rotationY: -6, rotationZ: 2.5, opacity: 1, duration: 0.6, ease: 'power2.out' },
+                0.15
+            );
+        }
+
+        // 3. Background Luxury Marquee sweeps subtly across screen
+        if (marquee) {
+            tl.to(marquee, {
+                xPercent: -20,
+                duration: 0.8,
+                ease: 'none'
+            }, 0.1);
+        }
+
+        // 4. Subtle out-fade toward end for seamless handoff to Portfolio section
+        tl.to([eyebrow, sub], {
+            opacity: 0.4,
+            duration: 0.15,
+            ease: 'none'
+        }, 0.85);
+
+    } else {
+        // Mobile: Elegant scroll-triggered stagger entrance for cards
+        const cards = [cardLeft, cardCenter, cardRight].filter(Boolean);
+        gsap.to([eyebrow, headline, sub].filter(Boolean), {
+            opacity: 1,
+            y: 0,
+            stagger: 0.1,
+            duration: 0.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+                trigger: section,
+                start: 'top 80%',
+                toggleActions: 'play none none none'
+            }
+        });
+
+        cards.forEach((card, idx) => {
+            gsap.fromTo(card,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    delay: idx * 0.1,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: card,
+                        start: 'top 85%',
+                        toggleActions: 'play none none none'
+                    }
+                }
+            );
+        });
+    }
 }
 
 // ==========================================================================

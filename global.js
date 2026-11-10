@@ -187,9 +187,10 @@ function initScrollReveals() {
                 toggleActions: 'play none none none'
             }
         });
-        // Subtle scale-down on inner image for depth
+        // Subtle scale-down on inner image for depth (exclude logos/experiences to prevent cropping)
         const img = block.querySelector('img');
-        if (img) {
+        const isGraphic = block.classList.contains('experience-img') || block.classList.contains('sde-feature-img');
+        if (img && !isGraphic) {
             gsap.fromTo(img,
                 { scale: 1.15 },
                 {

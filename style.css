@@ -767,6 +767,13 @@ h6 {
     z-index: 1;
 }
 
+.reveal-photo-wrap picture,
+.reveal-picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .reveal-main-img {
     width: 100%;
     height: 100%;
@@ -952,6 +959,257 @@ h6 {
     .rb-br { bottom: 1rem; right: 1rem; }
 
     .reveal-subtext br { display: none; }
+}
+
+/* ==========================================================================
+   SECTION 03B: THE ART OF OBSERVATION (TRIPTYCH HORIZON)
+   ========================================================================== */
+.triptych-section {
+    height: 220vh;
+    background-color: #0c0b0a;
+    position: relative;
+    overflow: visible;
+}
+
+.triptych-container {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, #151310 0%, #0c0b0a 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 5%;
+    perspective: 1200px;
+}
+
+.triptych-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 60vh;
+    background: radial-gradient(circle, rgba(197, 168, 128, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.triptych-header {
+    text-align: center;
+    max-width: 820px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.triptych-eyebrow {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.triptych-headline {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.8vw, 3.8rem);
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.gold-italic {
+    color: #c5a880;
+    font-style: italic;
+}
+
+.triptych-sub {
+    font-family: var(--font-body);
+    font-size: clamp(0.8rem, 1vw, 0.95rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 620px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+/* 3-Panel Stage */
+.triptych-stage {
+    display: flex;
+    gap: clamp(16px, 2.2vw, 36px);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 10;
+}
+
+.triptych-card {
+    flex: 1;
+    max-width: 380px;
+    background: rgba(24, 22, 20, 0.85);
+    border: 1px solid rgba(197, 168, 128, 0.18);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    will-change: transform, opacity;
+}
+
+.triptych-card:hover {
+    border-color: rgba(197, 168, 128, 0.45);
+    box-shadow: 0 25px 60px rgba(197, 168, 128, 0.12), 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.triptych-card.card-center {
+    border-color: rgba(197, 168, 128, 0.35);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(197, 168, 128, 0.08);
+}
+
+.triptych-img-wrap {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.triptych-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.triptych-card:hover .triptych-img {
+    transform: scale(1.05);
+}
+
+.triptych-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(12, 11, 10, 0.7) 100%);
+    pointer-events: none;
+}
+
+.triptych-meta {
+    padding: 12px 6px 4px;
+}
+
+.triptych-tag-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.t-pill {
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    font-weight: 700;
+}
+
+.t-pill-gold {
+    color: #e5cfb3;
+}
+
+.t-coord {
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.t-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 1.4vw, 1.4rem);
+    color: #fff;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+
+.t-caption {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.58);
+    margin: 0;
+}
+
+/* Background Marquee */
+.triptych-marquee-wrap {
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    width: 200%;
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.08;
+}
+
+.triptych-marquee-text {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .triptych-section {
+        height: auto;
+        padding: 14vw 5%;
+    }
+
+    .triptych-container {
+        height: auto;
+        padding: 0;
+        overflow: visible;
+        perspective: none;
+    }
+
+    .triptych-stage {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .triptych-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .triptych-img-wrap {
+        aspect-ratio: 4 / 3;
+    }
+
+    .triptych-marquee-wrap {
+        display: none;
+    }
 }
 
 /* ==========================================================================
@@ -1314,14 +1572,18 @@ a.portfolio-item {
     position: fixed;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 400px;
+    width: clamp(340px, 28vw, 460px);
+    aspect-ratio: 16 / 10;
+    height: auto;
     pointer-events: none;
     opacity: 0;
-    z-index: 10;
+    z-index: 100;
     overflow: hidden;
-    transform: translate(-50%, -50%) scale(0.8);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    background: #141312;
+    transform: translate(-50%, -50%) scale(0.85);
+    transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .service-hover-img.active {
@@ -1333,6 +1595,12 @@ a.portfolio-item {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.service-mob-preview {
+    display: none;
 }
 
 @media (max-width: 768px) {
@@ -1341,7 +1609,28 @@ a.portfolio-item {
     }
 
     .service-row {
-        padding: 2rem 0;
+        padding: 1.8rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+    }
+
+    .service-mob-preview {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 16 / 10;
+        border-radius: 6px;
+        overflow: hidden;
+        background: var(--bg-grey);
+    }
+
+    .service-mob-preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
     }
 }
 

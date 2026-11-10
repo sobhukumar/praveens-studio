@@ -753,14 +753,24 @@
 }
 
 .sde-feature-img {
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/3;
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
     overflow: hidden;
     clip-path: inset(0 0 100% 0);
+    border-radius: 8px;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
 }
 .sde-feature-img img {
     width: 100%;
-    height: 110%;
-    object-fit: cover;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .experiences-list {
@@ -802,18 +812,28 @@
 }
 
 .experience-img {
-    aspect-ratio: 4/5;
+    aspect-ratio: 4/3;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
     overflow: hidden;
-    background-color: var(--bg-grey);
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 .experience-img img {
     width: 100%;
-    height: 110%;
-    object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    height: 100%;
+    object-fit: contain;
+    padding: clamp(6px, 1.5vw, 14px);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .experience-item:hover .experience-img img {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 /* ==========================================================================
